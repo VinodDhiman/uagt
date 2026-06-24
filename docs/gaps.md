@@ -1,4 +1,4 @@
-# UAGC Gap View
+# UAGT Gap View
 
 > Mappings where coverage is incomplete (`partial`) or absent (`none`). These are the analytically valuable outputs (FR3).
 

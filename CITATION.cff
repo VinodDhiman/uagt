@@ -1,12 +1,12 @@
 cff-version: 1.2.0
-title: "UAGC — Unified AI Governance Crosswalk"
+title: "UAGT — Unified AI Governance Taxonomy"
 message: "If you use this crosswalk, please cite it."
 type: dataset
 authors:
   - given-names: Vinod
     family-names: Dhiman
-repository-code: "https://github.com/open-ai-governance/uagc"
-url: "https://github.com/open-ai-governance/uagc"
+repository-code: "https://github.com/open-ai-governance/uagt"
+url: "https://github.com/open-ai-governance/uagt"
 abstract: >
   An open, machine-readable, citable, and continuously versioned crosswalk across
   ISO/IEC 42001:2023, the NIST AI Risk Management Framework 1.0, and the EU AI Act

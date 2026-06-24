@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/open-ai-governance/uagc/schema/control.schema.json",
-  "title": "UAGC Master Control",
+  "$id": "https://github.com/open-ai-governance/uagt/schema/control.schema.json",
+  "title": "UAGT Master Control",
   "description": "A single normalized Master Control and its mappings out to the source frameworks. One file per control under data/controls/.",
   "type": "object",
   "additionalProperties": false,

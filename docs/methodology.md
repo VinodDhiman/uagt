@@ -1,14 +1,14 @@
-# UAGC methodology
+# UAGT methodology
 
-UAGC is the open, machine-readable **implementation** of the **Unified AI Governance
-Taxonomy (UAGT)** set out in:
+**UAGT — the Unified AI Governance Taxonomy** — is set out in:
 
 > Vinod Kumar, *Bridging AI Risk Frameworks: Reconciling ISO/IEC 42001, the NIST AI Risk
 > Management Framework, and the EU AI Act into a Unified Governance Taxonomy.*
 
-The paper is the cited methodology; this repository is the maintained, versioned crosswalk
-that operationalises it — the paper's own "future work" item of expressing the
-atomic-obligation crosswalk in a machine-readable, version-controlled schema.
+The paper is the cited methodology; **this repository is its open, machine-readable
+implementation** — the maintained, versioned crosswalk that operationalises the taxonomy,
+realising the paper's own "future work" item of expressing the atomic-obligation crosswalk
+in a machine-readable, version-controlled schema.
 
 ## Five analytical layers
 

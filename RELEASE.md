@@ -1,6 +1,6 @@
 # Release & go-live checklist
 
-This is the runbook for taking UAGC public and cutting a citable release. Steps marked
+This is the runbook for taking UAGT public and cutting a citable release. Steps marked
 **[you]** require human decisions or account access and cannot be automated here.
 
 ## One-time setup (before the first public release)
@@ -29,10 +29,10 @@ This is the runbook for taking UAGC public and cutting a citable release. Steps 
 3. Bump `version` in `CITATION.cff` (and it will flow into the Zenodo deposit).
 4. Tag and push:
    ```bash
-   git tag v1.0.0 -m "UAGC v1.0.0"
+   git tag v1.0.0 -m "UAGT v1.0.0"
    git push origin v1.0.0
    ```
-5. The `release` workflow validates, rebuilds all outputs, bundles `uagc-v1.0.0.zip`
+5. The `release` workflow validates, rebuilds all outputs, bundles `uagt-v1.0.0.zip`
    plus the JSON/CSV/XLSX exports, and publishes the GitHub Release.
 6. If Zenodo is connected, the DOI is minted within a few minutes. **[you]** copy the
    release DOI and the concept DOI into `CITATION.cff` (and the README badge), then

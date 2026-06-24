@@ -1,5 +1,5 @@
 {
-  "title": "UAGC — Unified AI Governance Crosswalk",
+  "title": "UAGT — Unified AI Governance Taxonomy",
   "upload_type": "dataset",
   "description": "An open, machine-readable, citable, and continuously versioned crosswalk across ISO/IEC 42001:2023, the NIST AI Risk Management Framework 1.0, and the EU AI Act (Regulation (EU) 2024/1689, as amended). Built on a normalized Master Control Set with typed relationships (full/partial/superset/subset/none), rationale, and provenance for every mapping. References clause/article identifiers only; source standards are not reproduced.",
   "access_right": "open",

@@ -1,11 +1,11 @@
-# UAGC — Unified AI Governance Crosswalk
+# UAGT — Unified AI Governance Taxonomy
 
 An open, machine-readable, citable, and continuously versioned crosswalk across
 **ISO/IEC 42001:2023**, the **NIST AI Risk Management Framework 1.0**, and the
 **EU AI Act (Regulation (EU) 2024/1689, as amended)**.
 
 Organizations adopting AI rarely get to pick a single governance regime — they are
-pulled toward all three at once. UAGC publishes the reconciliation between them as a
+pulled toward all three at once. UAGT publishes the reconciliation between them as a
 single normalized control set, so practitioners stop re-deriving the same mapping and
 the field gets a shared, maintained reference point.
 
@@ -15,18 +15,19 @@ the field gets a shared, maintained reference point.
 
 ## What makes this different
 
-Existing comparisons are point-in-time blog tables or gated commercial tools. UAGC is,
+Existing comparisons are point-in-time blog tables or gated commercial tools. UAGT is,
 all at once: **openly licensed**, **anchored on a transparent normalized control layer**,
 **schema-validated and machine-readable**, **citable via DOI**, **version-controlled
 against a pinned source manifest**, and **neutrally governed** for community contribution.
 
 ## Methodology
 
-UAGC is the open implementation of the **Unified AI Governance Taxonomy (UAGT)** from the
-paper *Bridging AI Risk Frameworks: Reconciling ISO/IEC 42001, the NIST AI Risk Management
-Framework, and the EU AI Act into a Unified Governance Taxonomy* (Vinod Kumar). The
-taxonomy's **5 analytical layers** and **8 regulation-stable governance domains (D1–D8)**,
-bound by a **traceability spine**, are the structure this repository encodes. See
+This repository is the open, machine-readable implementation of the **Unified AI
+Governance Taxonomy (UAGT)** set out in the paper *Bridging AI Risk Frameworks: Reconciling
+ISO/IEC 42001, the NIST AI Risk Management Framework, and the EU AI Act into a Unified
+Governance Taxonomy* (Vinod Kumar). The taxonomy's **5 analytical layers** and
+**8 regulation-stable governance domains (D1–D8)**, bound by a **traceability spine**, are
+the structure this repository encodes. See
 [`docs/methodology.md`](docs/methodology.md).
 
 ## How it works
@@ -86,7 +87,7 @@ evidence/              timestamped metric snapshots + dashboard (committed)
 
 - **Data + docs:** [CC BY 4.0](LICENSE-DATA) — attribution is a license condition.
 - **Tooling (scripts):** [Apache-2.0](LICENSE).
-- **Source standards are never reproduced.** UAGC references clause/article identifiers
+- **Source standards are never reproduced.** UAGT references clause/article identifiers
   and short labels only; the standards themselves remain the copyright of ISO, NIST, and
   the EU and must be obtained from their issuers.
 

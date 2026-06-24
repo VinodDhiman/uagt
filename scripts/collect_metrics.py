@@ -54,7 +54,7 @@ def gh_get(path: str, token: str):
             "Accept": "application/vnd.github+json",
             "X-GitHub-Api-Version": "2022-11-28",
             "Authorization": f"Bearer {token}",
-            "User-Agent": "uagc-metrics",
+            "User-Agent": "uagt-metrics",
         },
     )
     try:
@@ -161,11 +161,11 @@ def render_dashboard(evidence_dir: Path) -> Path | None:
     )
     html = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>UAGC — Adoption Evidence</title>
+<title>UAGT — Adoption Evidence</title>
 <style>body{{font:16px/1.5 system-ui,sans-serif;margin:2rem;color:#1a1d21}}
 table{{border-collapse:collapse}}td,th{{border-bottom:1px solid #d7dce2;padding:.4rem .7rem;text-align:left}}
 .note{{color:#5b6470;font-size:.9rem;max-width:46rem}}</style></head><body>
-<h1>UAGC adoption evidence</h1>
+<h1>UAGT adoption evidence</h1>
 <p class="note">Latest value per signal. Every figure is third-party-sourced, UTC-timestamped,
 and reproducible from <code>evidence/snapshots/</code> (organic only — see NFR5). History in
 <code>evidence/metrics.csv</code>; {len(rows)} records, {len(latest)} signals.</p>

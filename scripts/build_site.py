@@ -37,7 +37,7 @@ PAGE = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>UAGC — Unified AI Governance Crosswalk</title>
+<title>UAGT — Unified AI Governance Taxonomy</title>
 <style>
   :root {{
     --bg: #ffffff; --fg: #1a1d21; --muted: #5b6470; --line: #d7dce2;
@@ -80,7 +80,7 @@ PAGE = """<!doctype html>
 </head>
 <body>
 <header>
-  <h1>UAGC — Unified AI Governance Crosswalk</h1>
+  <h1>UAGT — Unified AI Governance Taxonomy</h1>
   <p class="sub" id="baseline"></p>
 </header>
 <main>
@@ -247,7 +247,7 @@ def render_site(controls, manifest) -> str:
 
 
 def main() -> int:
-    ap = argparse.ArgumentParser(description="Build the UAGC searchable static site.")
+    ap = argparse.ArgumentParser(description="Build the UAGT searchable static site.")
     ap.add_argument("--check", action="store_true", help="validate only; no output written")
     args = ap.parse_args()
 

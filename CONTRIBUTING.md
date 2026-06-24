@@ -1,6 +1,6 @@
-# Contributing to UAGC
+# Contributing to UAGT
 
-Thank you for helping improve the Unified AI Governance Crosswalk. Corrections,
+Thank you for helping improve the Unified AI Governance Taxonomy. Corrections,
 additional mappings, and new Master Controls are all welcome.
 
 ## Ground rules

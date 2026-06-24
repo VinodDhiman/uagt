@@ -1,4 +1,4 @@
-# UAGC Source Manifest
+# UAGT Source Manifest
 # The pinned version/date of each source framework that the current build reflects.
 # Every mapping in data/controls/*.yaml must reference a framework + version listed
 # here (enforced in CI by scripts/build_tables.py --check). Bumping a version here is

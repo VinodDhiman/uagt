@@ -1,6 +1,6 @@
-# UAGC Governance
+# UAGT Governance
 
-UAGC aims to be a neutral, field-level reference — not a product or a marketing surface.
+UAGT aims to be a neutral, field-level reference — not a product or a marketing surface.
 This document describes how the project is run and how decisions are made.
 
 ## Model

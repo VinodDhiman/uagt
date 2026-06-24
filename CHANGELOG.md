@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the UAGC crosswalk are recorded here. The changelog narrates
+All notable changes to the UAGT crosswalk are recorded here. The changelog narrates
 *why* a mapping moved — especially as source standards shift — which is the living-document
 value static comparison tables cannot match.
 
