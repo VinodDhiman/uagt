@@ -24,6 +24,11 @@ standard changes, MINOR for added controls/mappings, PATCH for corrections.
 - Searchable static site (`scripts/build_site.py` → `site/index.html`): a single
   self-contained HTML file (no CDN, no login) with full-text search and filtering by
   domain, framework, relationship, and a gaps-only toggle. XLSX export enabled.
+- Metrics pipeline (`scripts/collect_metrics.py` + `.github/workflows/metrics.yml`):
+  captures organic, third-party-sourced, UTC-timestamped GitHub signals (stars, forks,
+  watchers, 14-day traffic, release downloads) into append-only `evidence/` snapshots +
+  `metrics.csv` + `dashboard.html`. Scheduled biweekly (1st & 15th) for the rolling
+  traffic window. Zenodo/PyPI channels stubbed for launch. Verified live against the API.
 
 ### Note
 - All mappings are signed off with `reviewer: "Vinod Dhiman"`.

@@ -1,0 +1,46 @@
+name: collect-metrics
+
+# Captures organic, third-party-sourced adoption metrics into /evidence/ and commits
+# them, so the evidence trail is itself version-controlled and tamper-evident (design
+# section 7). Runs on the 1st and 15th of each month — i.e. at least biweekly — because
+# the GitHub Traffic API only exposes a rolling 14-day window; miss it and data is lost.
+
+on:
+  schedule:
+    - cron: "0 6 1,15 * *"   # 06:00 UTC, 1st & 15th (within the 14-day traffic window)
+  workflow_dispatch: {}        # allow manual runs
+
+permissions:
+  contents: write              # to commit the snapshot back to the repo
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Collect metrics
+        env:
+          # The Traffic API requires push access. The default github.token usually cannot
+          # read traffic — set a repo-scoped PAT as the METRICS_TOKEN secret for full
+          # coverage; without it, star/fork/release signals still capture.
+          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN || github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          # ZENODO_RECORD_ID: ${{ vars.ZENODO_RECORD_ID }}   # uncomment once a DOI is minted
+        run: python scripts/collect_metrics.py
+
+      - name: Commit snapshot
+        run: |
+          git config user.name "uagc-metrics-bot"
+          git config user.email "actions@github.com"
+          git add evidence/
+          if git diff --cached --quiet; then
+            echo "no metric changes to commit"
+          else
+            git commit -m "metrics: snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi

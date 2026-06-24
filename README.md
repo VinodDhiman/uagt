@@ -63,6 +63,7 @@ data/source-manifest.yaml  pinned versions of each framework
 schema/control.schema.json JSON Schema for validation
 scripts/build_tables.py    YAML -> Markdown / CSV / XLSX / JSON
 scripts/build_site.py      YAML -> searchable static site (site/index.html)
+scripts/collect_metrics.py organic adoption metrics -> /evidence/ (run on a schedule)
 docs/                  rendered crosswalk + methodology (committed)
 site/                  built static site (regenerated; not committed)
 evidence/              timestamped metric snapshots + dashboard (committed)
