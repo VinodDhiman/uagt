@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/open-ai-governance/uagc/schema/control.schema.json",
+  "title": "UAGC Master Control",
+  "description": "A single normalized Master Control and its mappings out to the source frameworks. One file per control under data/controls/.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "title", "domain", "objective", "mappings"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable Master Control id: MC-<DOMAIN>-<NN>.",
+      "pattern": "^MC-[A-Z]{2,3}-[0-9]{2}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 4,
+      "maxLength": 160
+    },
+    "domain": {
+      "type": "string",
+      "description": "Governance domain this control belongs to.",
+      "enum": [
+        "risk-management",
+        "data-governance",
+        "transparency",
+        "human-oversight",
+        "security",
+        "lifecycle",
+        "accountability"
+      ]
+    },
+    "objective": {
+      "type": "string",
+      "description": "What the control is trying to achieve, in the project's own words (never source text).",
+      "minLength": 10
+    },
+    "mappings": {
+      "type": "array",
+      "description": "One mapping per source-framework reference. FR1 requires all three frameworks represented.",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/mapping" }
+    }
+  },
+  "$defs": {
+    "mapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["framework", "version", "relationship", "confidence", "rationale", "reviewer"],
+      "properties": {
+        "framework": {
+          "type": "string",
+          "enum": ["ISO-IEC-42001", "NIST-AI-RMF", "EU-AI-ACT"]
+        },
+        "version": {
+          "type": "string",
+          "description": "Must match the pinned version in data/source-manifest.yaml (checked in CI)."
+        },
+        "ref": {
+          "type": ["string", "null"],
+          "description": "Clause / Annex control / Article identifier. Null only when relationship is 'none'.",
+          "maxLength": 40
+        },
+        "label": {
+          "type": ["string", "null"],
+          "description": "Short label for the referenced item. Never the verbatim standard text.",
+          "maxLength": 160
+        },
+        "relationship": {
+          "type": "string",
+          "description": "Nature of correspondence between the Master Control and this reference.",
+          "enum": ["full", "partial", "superset", "subset", "none"]
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 10
+        },
+        "reviewer": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "relationship": { "const": "none" } }
+          },
+          "else": {
+            "required": ["ref", "label"],
+            "properties": {
+              "ref": { "type": "string", "minLength": 1 },
+              "label": { "type": "string", "minLength": 1 }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

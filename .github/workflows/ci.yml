@@ -1,0 +1,36 @@
+name: validate-and-build
+
+# CI gate (NFR2 + NFR3): every PR must validate against the schema, resolve all
+# cross-references, and build cleanly. Merge is blocked on a clean run.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Validate canonical data (schema + cross-references + FR1 coverage)
+        run: python scripts/build_tables.py --check
+
+      - name: Build all outputs (dry run must succeed)
+        run: python scripts/build_tables.py
+
+      - name: Fail if committed docs/ are stale
+        run: |
+          if ! git diff --quiet -- docs/; then
+            echo "::error::docs/ is out of date. Run 'python scripts/build_tables.py' and commit the result."
+            git diff --stat -- docs/
+            exit 1
+          fi

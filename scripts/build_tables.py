@@ -1,0 +1,340 @@
+#!/usr/bin/env python3
+"""Build all UAGC outputs from the canonical YAML source.
+
+Single source of truth (NFR1): every output here derives from data/controls/*.yaml
+and data/source-manifest.yaml. Nothing downstream is hand-edited.
+
+Usage:
+    python scripts/build_tables.py            # validate + build all outputs
+    python scripts/build_tables.py --check    # validate only (CI gate), no writes
+
+Outputs:
+    docs/crosswalk.md          full crosswalk table, grouped by domain
+    docs/gaps.md               gap-only view (relationship = none / partial)
+    build/crosswalk.json       whole crosswalk as one machine-readable file
+    build/crosswalk.csv        flat export for spreadsheets / auditors
+    build/crosswalk.xlsx       same, if openpyxl is installed (optional)
+"""
+from __future__ import annotations
+
+import argparse
+import csv
+import json
+import sys
+from pathlib import Path
+
+import yaml
+from jsonschema import Draft202012Validator
+
+ROOT = Path(__file__).resolve().parent.parent
+CONTROLS_DIR = ROOT / "data" / "controls"
+MANIFEST_PATH = ROOT / "data" / "source-manifest.yaml"
+SCHEMA_PATH = ROOT / "schema" / "control.schema.json"
+DOCS_DIR = ROOT / "docs"
+BUILD_DIR = ROOT / "build"
+
+# Display order for frameworks (columns) and enums.
+FRAMEWORK_ORDER = ["ISO-IEC-42001", "NIST-AI-RMF", "EU-AI-ACT"]
+FRAMEWORK_LABELS = {
+    "ISO-IEC-42001": "ISO/IEC 42001",
+    "NIST-AI-RMF": "NIST AI RMF",
+    "EU-AI-ACT": "EU AI Act",
+}
+RELATIONSHIP_ORDER = ["full", "superset", "subset", "partial", "none"]
+DOMAIN_LABELS = {
+    "risk-management": "Risk management",
+    "data-governance": "Data governance",
+    "transparency": "Transparency",
+    "human-oversight": "Human oversight",
+    "security": "Security",
+    "lifecycle": "Lifecycle",
+    "accountability": "Accountability",
+}
+
+
+class BuildError(Exception):
+    """Raised when validation fails. Message is the aggregated problem list."""
+
+
+def load_yaml(path: Path):
+    with path.open(encoding="utf-8") as fh:
+        return yaml.safe_load(fh)
+
+
+def load_controls() -> list[dict]:
+    controls = []
+    for path in sorted(CONTROLS_DIR.glob("*.yaml")):
+        data = load_yaml(path)
+        data["_path"] = str(path.relative_to(ROOT))
+        controls.append(data)
+    return controls
+
+
+def validate(controls: list[dict], manifest: dict) -> list[str]:
+    """Return a list of human-readable problems. Empty list == valid."""
+    problems: list[str] = []
+
+    schema = json.loads(SCHEMA_PATH.read_text(encoding="utf-8"))
+    validator = Draft202012Validator(schema)
+
+    # Allowed (framework, version) pairs from the pinned manifest.
+    allowed_versions = {fw["id"]: fw["version"] for fw in manifest["frameworks"]}
+
+    seen_ids: dict[str, str] = {}
+    for ctrl in controls:
+        where = ctrl.get("_path", "<unknown>")
+
+        # 1) Schema validation.
+        payload = {k: v for k, v in ctrl.items() if not k.startswith("_")}
+        for err in sorted(validator.iter_errors(payload), key=lambda e: e.path):
+            loc = "/".join(str(p) for p in err.path) or "(root)"
+            problems.append(f"{where}: schema: {loc}: {err.message}")
+
+        cid = ctrl.get("id", "?")
+
+        # 2) Filename matches id.
+        expected = f"{cid}.yaml"
+        if not where.endswith(expected):
+            problems.append(f"{where}: filename should be {expected} to match id '{cid}'")
+
+        # 3) Duplicate ids.
+        if cid in seen_ids:
+            problems.append(f"{where}: duplicate id '{cid}' (also in {seen_ids[cid]})")
+        else:
+            seen_ids[cid] = where
+
+        # 4) Cross-reference: each mapping's framework+version is pinned in the manifest.
+        frameworks_present = set()
+        for m in ctrl.get("mappings", []):
+            fw = m.get("framework")
+            frameworks_present.add(fw)
+            if fw in allowed_versions and m.get("version") != allowed_versions[fw]:
+                problems.append(
+                    f"{where}: {fw} version '{m.get('version')}' "
+                    f"!= pinned '{allowed_versions[fw]}' in source-manifest.yaml"
+                )
+
+        # 5) FR1: every control covers all three frameworks (none is allowed, absent is not).
+        missing = [fw for fw in FRAMEWORK_ORDER if fw not in frameworks_present]
+        if missing:
+            problems.append(
+                f"{where}: FR1 three-way coverage missing for: {', '.join(missing)} "
+                "(use relationship: none if there is no equivalent)"
+            )
+
+    return problems
+
+
+def _mapping_by_framework(ctrl: dict) -> dict[str, dict]:
+    # If a control maps to a framework more than once, keep them all but index the first
+    # for the summary column; the full list is preserved in JSON/CSV.
+    out: dict[str, list[dict]] = {}
+    for m in ctrl.get("mappings", []):
+        out.setdefault(m["framework"], []).append(m)
+    return out
+
+
+def _cell(mappings: list[dict] | None) -> str:
+    if not mappings:
+        return "—"
+    parts = []
+    for m in mappings:
+        ref = m.get("ref") or "—"
+        rel = m.get("relationship")
+        parts.append(f"`{ref}` ({rel})")
+    return "<br>".join(parts)
+
+
+# ---------------------------------------------------------------------------
+# Renderers
+# ---------------------------------------------------------------------------
+
+def render_crosswalk_md(controls: list[dict], manifest: dict) -> str:
+    lines = ["# UAGC Crosswalk", ""]
+    lines.append(
+        "> Generated by `scripts/build_tables.py` — do not edit by hand. "
+        "Source of truth is `data/controls/*.yaml`."
+    )
+    lines.append("")
+    lines.append(
+        f"Source baseline (manifest `{manifest['manifest_version']}`, "
+        f"updated {manifest['updated']}): "
+        + ", ".join(f"{FRAMEWORK_LABELS[fw['id']]} {fw['version']}" for fw in manifest["frameworks"])
+        + "."
+    )
+    lines.append("")
+
+    by_domain: dict[str, list[dict]] = {}
+    for ctrl in controls:
+        by_domain.setdefault(ctrl["domain"], []).append(ctrl)
+
+    header = "| Master Control | " + " | ".join(FRAMEWORK_LABELS[f] for f in FRAMEWORK_ORDER) + " |"
+    divider = "| --- | " + " | ".join(["---"] * len(FRAMEWORK_ORDER)) + " |"
+
+    for domain in sorted(by_domain, key=lambda d: DOMAIN_LABELS.get(d, d)):
+        lines.append(f"## {DOMAIN_LABELS.get(domain, domain)}")
+        lines.append("")
+        lines.append(header)
+        lines.append(divider)
+        for ctrl in sorted(by_domain[domain], key=lambda c: c["id"]):
+            idx = _mapping_by_framework(ctrl)
+            cells = [_cell(idx.get(f)) for f in FRAMEWORK_ORDER]
+            name = f"**{ctrl['id']}** {ctrl['title']}"
+            lines.append(f"| {name} | " + " | ".join(cells) + " |")
+        lines.append("")
+
+    lines.append("---")
+    lines.append("")
+    lines.append(
+        "Relationship legend: **full** · **superset** · **subset** · **partial** · **none** (gap). "
+        "See [gaps.md](gaps.md) for the gap-only view."
+    )
+    lines.append("")
+    return "\n".join(lines)
+
+
+def render_gaps_md(controls: list[dict]) -> str:
+    lines = ["# UAGC Gap View", ""]
+    lines.append(
+        "> Mappings where coverage is incomplete (`partial`) or absent (`none`). "
+        "These are the analytically valuable outputs (FR3)."
+    )
+    lines.append("")
+    lines.append("| Master Control | Framework | Ref | Relationship | Confidence | Rationale |")
+    lines.append("| --- | --- | --- | --- | --- | --- |")
+    rows = []
+    for ctrl in controls:
+        for m in ctrl.get("mappings", []):
+            if m["relationship"] in ("partial", "none"):
+                rows.append((ctrl, m))
+    # none first (hard gaps), then partial; then by control id.
+    rows.sort(key=lambda r: (0 if r[1]["relationship"] == "none" else 1, r[0]["id"]))
+    for ctrl, m in rows:
+        ref = m.get("ref") or "—"
+        rationale = " ".join((m.get("rationale") or "").split())
+        lines.append(
+            f"| **{ctrl['id']}** {ctrl['title']} | {FRAMEWORK_LABELS[m['framework']]} "
+            f"| `{ref}` | {m['relationship']} | {m['confidence']} | {rationale} |"
+        )
+    lines.append("")
+    return "\n".join(lines)
+
+
+def build_json(controls: list[dict], manifest: dict) -> dict:
+    return {
+        "manifest_version": manifest["manifest_version"],
+        "updated": manifest["updated"],
+        "frameworks": manifest["frameworks"],
+        "controls": [
+            {k: v for k, v in ctrl.items() if not k.startswith("_")}
+            for ctrl in sorted(controls, key=lambda c: c["id"])
+        ],
+    }
+
+
+def build_rows(controls: list[dict]) -> list[dict]:
+    rows = []
+    for ctrl in sorted(controls, key=lambda c: c["id"]):
+        for m in ctrl.get("mappings", []):
+            rows.append(
+                {
+                    "control_id": ctrl["id"],
+                    "control_title": ctrl["title"],
+                    "domain": ctrl["domain"],
+                    "framework": m["framework"],
+                    "version": m["version"],
+                    "ref": m.get("ref") or "",
+                    "label": m.get("label") or "",
+                    "relationship": m["relationship"],
+                    "confidence": m["confidence"],
+                    "rationale": " ".join((m.get("rationale") or "").split()),
+                    "reviewer": m["reviewer"],
+                }
+            )
+    return rows
+
+
+def write_csv(rows: list[dict], path: Path) -> None:
+    fields = list(rows[0].keys()) if rows else []
+    with path.open("w", newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(fh, fieldnames=fields)
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def write_xlsx(rows: list[dict], path: Path) -> bool:
+    try:
+        from openpyxl import Workbook
+    except ImportError:
+        return False
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "crosswalk"
+    if rows:
+        ws.append(list(rows[0].keys()))
+        for r in rows:
+            ws.append(list(r.values()))
+    wb.save(path)
+    return True
+
+
+def summarize(controls: list[dict]) -> str:
+    counts = {rel: 0 for rel in RELATIONSHIP_ORDER}
+    total = 0
+    for ctrl in controls:
+        for m in ctrl.get("mappings", []):
+            counts[m["relationship"]] = counts.get(m["relationship"], 0) + 1
+            total += 1
+    parts = [f"{counts[r]} {r}" for r in RELATIONSHIP_ORDER if counts.get(r)]
+    return f"{len(controls)} controls, {total} mappings ({', '.join(parts)})"
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description="Build UAGC outputs from canonical YAML.")
+    ap.add_argument("--check", action="store_true", help="validate only; no outputs written")
+    args = ap.parse_args()
+
+    manifest = load_yaml(MANIFEST_PATH)
+    controls = load_controls()
+
+    if not controls:
+        print("error: no controls found under data/controls/", file=sys.stderr)
+        return 1
+
+    problems = validate(controls, manifest)
+    if problems:
+        print(f"VALIDATION FAILED — {len(problems)} problem(s):", file=sys.stderr)
+        for p in problems:
+            print(f"  - {p}", file=sys.stderr)
+        return 1
+
+    print(f"validation OK — {summarize(controls)}")
+
+    if args.check:
+        return 0
+
+    DOCS_DIR.mkdir(exist_ok=True)
+    BUILD_DIR.mkdir(exist_ok=True)
+
+    (DOCS_DIR / "crosswalk.md").write_text(render_crosswalk_md(controls, manifest), encoding="utf-8")
+    (DOCS_DIR / "gaps.md").write_text(render_gaps_md(controls), encoding="utf-8")
+
+    (BUILD_DIR / "crosswalk.json").write_text(
+        json.dumps(build_json(controls, manifest), indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    rows = build_rows(controls)
+    write_csv(rows, BUILD_DIR / "crosswalk.csv")
+    xlsx_ok = write_xlsx(rows, BUILD_DIR / "crosswalk.xlsx")
+
+    print("wrote:")
+    print("  docs/crosswalk.md")
+    print("  docs/gaps.md")
+    print("  build/crosswalk.json")
+    print("  build/crosswalk.csv")
+    print("  build/crosswalk.xlsx" if xlsx_ok else "  build/crosswalk.xlsx (skipped: openpyxl not installed)")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

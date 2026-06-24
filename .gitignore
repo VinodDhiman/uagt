@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# OS
+.DS_Store
+
+# Generated machine outputs (rebuildable from canonical YAML via scripts/build_tables.py).
+# docs/ (rendered Markdown) IS committed so the crosswalk is browsable on GitHub;
+# build/ (csv/json/xlsx) is regenerated and attached to releases, not version-controlled.
+/build/
+/site/
+
+# Note: /evidence/ is intentionally NOT ignored — metric snapshots are committed so the
+# adoption trail is itself version-controlled and tamper-evident (design section 7).

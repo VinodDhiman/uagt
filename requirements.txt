@@ -1,0 +1,6 @@
+# Core build/validation dependencies (Apache-2.0 tooling).
+PyYAML>=6.0
+jsonschema>=4.18
+
+# Optional: enables build/crosswalk.xlsx export. The build skips XLSX gracefully if absent.
+openpyxl>=3.1

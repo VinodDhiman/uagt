@@ -1,0 +1,43 @@
+# UAGC Source Manifest
+# The pinned version/date of each source framework that the current build reflects.
+# Every mapping in data/controls/*.yaml must reference a framework + version listed
+# here (enforced in CI by scripts/build_tables.py --check). Bumping a version here is
+# a deliberate, changelog-worthy event (see GOVERNANCE.md and section 8.6 of the design).
+
+manifest_version: "0.1.0"
+updated: "2026-06-23"
+
+frameworks:
+  - id: ISO-IEC-42001
+    name: "ISO/IEC 42001:2023 - Artificial intelligence management system"
+    version: "2023"
+    structure: "Management-system clauses (4-10) + Annex A controls (A.x)"
+    issuer: "ISO/IEC"
+    obtain_from: "https://www.iso.org/standard/81230.html"
+    notes: "Referenced by clause number and Annex A control id only; text not reproduced."
+
+  - id: NIST-AI-RMF
+    name: "NIST AI Risk Management Framework 1.0 (NIST AI 100-1)"
+    version: "1.0"
+    structure: "Functions: GOVERN / MAP / MEASURE / MANAGE, with categories and subcategories"
+    issuer: "NIST"
+    obtain_from: "https://doi.org/10.6028/NIST.AI.100-1"
+    notes: "Subcategory ids used, e.g. MAP-2.3, GOVERN-1.1."
+
+  - id: EU-AI-ACT
+    name: "Regulation (EU) 2024/1689 (EU AI Act)"
+    version: "2024/1689"
+    structure: "113 articles + 13 annexes, risk-tiered obligations"
+    issuer: "European Union"
+    obtain_from: "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+    amendments:
+      - name: "Digital Omnibus on AI"
+        status: "Provisional political agreement 7 May 2026; formal adoption expected ~June-July 2026"
+        tracked: true
+        notes: >
+          High-risk obligations for Annex III deferred to 2 Dec 2027 and Annex I to 2 Aug 2028;
+          new Art.5 prohibition (NCII/CSAM) from 2 Dec 2026; Art.50 transparency, GPAI penalty
+          powers and market surveillance remain live for 2 Aug 2026. Not yet in the Official
+          Journal as of this manifest date - mappings reflect 2024/1689 as enacted, with the
+          Omnibus tracked in the changelog until publication triggers a MAJOR version bump.
+    notes: "Referenced by Article number only; text not reproduced."
