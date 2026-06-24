@@ -48,8 +48,11 @@ pip install -r requirements.txt
 # Validate the canonical data (this is the CI gate):
 python scripts/build_tables.py --check
 
-# Build all outputs (docs/ + build/):
+# Build tables/exports (docs/ + build/):
 python scripts/build_tables.py
+
+# Build the searchable static site (site/index.html — open it in any browser):
+python scripts/build_site.py
 ```
 
 ## Repository layout
@@ -59,7 +62,9 @@ data/controls/         one YAML per Master Control (canonical source)
 data/source-manifest.yaml  pinned versions of each framework
 schema/control.schema.json JSON Schema for validation
 scripts/build_tables.py    YAML -> Markdown / CSV / XLSX / JSON
+scripts/build_site.py      YAML -> searchable static site (site/index.html)
 docs/                  rendered crosswalk + methodology (committed)
+site/                  built static site (regenerated; not committed)
 evidence/              timestamped metric snapshots + dashboard (committed)
 ```
 

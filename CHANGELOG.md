@@ -21,6 +21,9 @@ standard changes, MINOR for added controls/mappings, PATCH for corrections.
 - Documented gaps (`relationship: none`): EU AI Act Art.50 synthetic-content disclosure
   and Art.15 cybersecurity have no clean ISO/IEC 42001 equivalent (ISO defers security to
   ISO/IEC 27001).
+- Searchable static site (`scripts/build_site.py` → `site/index.html`): a single
+  self-contained HTML file (no CDN, no login) with full-text search and filtering by
+  domain, framework, relationship, and a gaps-only toggle. XLSX export enabled.
 
 ### Note
 - All mappings are signed off with `reviewer: "Vinod Dhiman"`.
