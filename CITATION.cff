@@ -5,8 +5,9 @@ type: dataset
 authors:
   - given-names: Vinod
     family-names: Dhiman
-repository-code: "https://github.com/open-ai-governance/uagt"
-url: "https://github.com/open-ai-governance/uagt"
+repository-code: "https://github.com/VinodDhiman/uagt"
+url: "https://github.com/VinodDhiman/uagt"
+doi: "10.5281/zenodo.20823079"  # concept DOI — always resolves to the latest version
 abstract: >
   An open, machine-readable, citable, and continuously versioned crosswalk across
   ISO/IEC 42001:2023, the NIST AI Risk Management Framework 1.0, and the EU AI Act
@@ -21,9 +22,15 @@ keywords:
   - crosswalk
   - compliance
 license: CC-BY-4.0
-version: "1.0.0"
+version: "1.1.0"
 date-released: "2026-06-24"
-# A release DOI (Zenodo) and concept DOI will be added here at v1.0 (FR8).
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.20823079"
+    description: "Concept DOI (all versions)"
+  - type: doi
+    value: "10.5281/zenodo.20823080"
+    description: "Version v1.0.0"
 references:
   - type: article
     title: "Bridging AI Risk Frameworks: Reconciling ISO/IEC 42001, the NIST AI Risk Management Framework, and the EU AI Act into a Unified Governance Taxonomy"

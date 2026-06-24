@@ -1,5 +1,7 @@
 # UAGT — Unified AI Governance Taxonomy
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20823079.svg)](https://doi.org/10.5281/zenodo.20823079)
+
 An open, machine-readable, citable, and continuously versioned crosswalk across
 **ISO/IEC 42001:2023**, the **NIST AI Risk Management Framework 1.0**, and the
 **EU AI Act (Regulation (EU) 2024/1689, as amended)**.
@@ -67,6 +69,9 @@ python scripts/build_tables.py
 
 # Build the searchable static site (site/index.html — open it in any browser):
 python scripts/build_site.py
+
+# Build the OSCAL 1.1.2 catalog (build/oscal/uagt-catalog.json) for GRC tooling:
+python scripts/build_oscal.py
 ```
 
 ## Repository layout
@@ -77,6 +82,7 @@ data/source-manifest.yaml  pinned versions of each framework
 schema/control.schema.json JSON Schema for validation
 scripts/build_tables.py    YAML -> Markdown / CSV / XLSX / JSON
 scripts/build_site.py      YAML -> searchable static site (site/index.html)
+scripts/build_oscal.py     YAML -> OSCAL 1.1.2 catalog (build/oscal/uagt-catalog.json)
 scripts/collect_metrics.py organic adoption metrics -> /evidence/ (run on a schedule)
 docs/                  rendered crosswalk + methodology (committed)
 site/                  built static site (regenerated; not committed)
@@ -99,5 +105,9 @@ and CI must pass (schema valid, references resolve, build clean) before merge.
 
 ## Citing
 
-See [CITATION.cff](CITATION.cff). Each release will carry a persistent DOI (via Zenodo),
-plus a concept DOI for the project as a whole.
+Cite via the **concept DOI [10.5281/zenodo.20823079](https://doi.org/10.5281/zenodo.20823079)**,
+which always resolves to the latest version (v1.0.0 is
+[10.5281/zenodo.20823080](https://doi.org/10.5281/zenodo.20823080)). Machine-readable
+metadata is in [CITATION.cff](CITATION.cff). The crosswalk implements the UAGT taxonomy
+from the methodology paper — see [docs/methodology.md](docs/methodology.md) — making the
+paper and repo a reciprocal, traceable pair.

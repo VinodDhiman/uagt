@@ -10,6 +10,21 @@ standard changes, MINOR for added controls/mappings, PATCH for corrections.
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-06-24
+
+### Added
+- **OSCAL export** (`scripts/build_oscal.py` → `build/oscal/uagt-catalog.json`): an
+  OSCAL 1.1.2 catalog of the Master Control Set, grouped by the 8 governance domains, with
+  the three-way crosswalk encoded as structured control props (class = framework id) and
+  links to back-matter framework resources. Structurally validated against the official
+  OSCAL 1.1.2 schema; deterministic UUIDs for reproducible builds. Wired into CI and the
+  release bundle. (Realises FR5's OSCAL representation and the design's v1.1 milestone.)
+
+### Changed
+- DOIs minted via Zenodo and wired in: concept DOI `10.5281/zenodo.20823079` (all versions)
+  and `10.5281/zenodo.20823080` (v1.0.0) in `CITATION.cff`, README badge, and citing section.
+- Repository URLs in `CITATION.cff` and the schema `$id` corrected to the live repo.
+
 ## [1.0.0] - 2026-06-24
 
 First public release. The repository is the open, machine-readable implementation of the

@@ -25,11 +25,12 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Validate, build tables + site
+      - name: Validate, build tables + site + OSCAL
         run: |
           python scripts/build_tables.py --check
           python scripts/build_tables.py
           python scripts/build_site.py
+          python scripts/build_oscal.py
 
       - name: Bundle artifacts
         run: |
@@ -37,6 +38,7 @@ jobs:
           mkdir -p dist
           # Machine-readable exports as standalone assets.
           cp build/crosswalk.json build/crosswalk.csv build/crosswalk.xlsx dist/ || true
+          cp build/oscal/uagt-catalog.json dist/ || true
           # One reproducible archive of the canonical source + all generated outputs.
           zip -r "dist/uagt-${TAG}.zip" \
             data schema scripts docs site build \
