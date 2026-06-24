@@ -15,7 +15,7 @@ mappings:
     rationale: >
       Clause 8.2 requires a defined AI risk assessment process, complemented by 6.1
       (actions to address risks); together these map directly to this control.
-    reviewer: "vinod"
+    reviewer: "Vinod Dhiman"
   - framework: NIST-AI-RMF
     version: "1.0"
     ref: "MANAGE-1.1"
@@ -26,7 +26,7 @@ mappings:
       MANAGE covers treatment and MAP covers identification; the assessment activity
       is distributed across functions rather than a single prescribed process, so the
       correspondence to one consolidated control is partial.
-    reviewer: "vinod"
+    reviewer: "Vinod Dhiman"
   - framework: EU-AI-ACT
     version: "2024/1689"
     ref: "Art.9"
@@ -36,4 +36,4 @@ mappings:
     rationale: >
       Article 9 mandates a continuous, iterative risk management system for high-risk
       AI systems, closely matching the intent of this control for in-scope systems.
-    reviewer: "vinod"
+    reviewer: "Vinod Dhiman"

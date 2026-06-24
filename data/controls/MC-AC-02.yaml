@@ -14,7 +14,7 @@ mappings:
     rationale: >
       Annex A.3.2 (with clause 5.3) requires defined and communicated AI roles and
       responsibilities.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: NIST-AI-RMF
     version: "1.0"
     ref: "GOVERN-2.1"
@@ -24,7 +24,7 @@ mappings:
     rationale: >
       GOVERN 2.1 requires documented, clear roles, responsibilities, and communication
       lines.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: EU-AI-ACT
     version: "2024/1689"
     ref: "Art.16"
@@ -34,4 +34,4 @@ mappings:
     rationale: >
       Art.16 allocates accountability to providers (Art.26 to deployers); these are
       statutory obligations rather than an internal responsibility model, hence partial.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"

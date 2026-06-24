@@ -14,7 +14,7 @@ mappings:
     rationale: >
       A.5.2-A.5.4 (with clause 6.1.4/8.4) establish an impact-assessment process covering
       individuals, groups, and society.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: NIST-AI-RMF
     version: "1.0"
     ref: "MAP-5.1"
@@ -24,7 +24,7 @@ mappings:
     rationale: >
       MAP 5.1 requires documenting the likelihood and magnitude of each beneficial and
       harmful impact.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: EU-AI-ACT
     version: "2024/1689"
     ref: "Art.27"
@@ -34,4 +34,4 @@ mappings:
     rationale: >
       Art.27 mandates a fundamental-rights impact assessment for certain deployers of
       high-risk systems.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"

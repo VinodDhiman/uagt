@@ -14,7 +14,7 @@ mappings:
     rationale: >
       Annex A.2.2 requires a documented AI policy; clause 5.2 mandates leadership
       approval.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: NIST-AI-RMF
     version: "1.0"
     ref: "GOVERN-1.4"
@@ -24,7 +24,7 @@ mappings:
     rationale: >
       GOVERN 1.4 establishes the risk-management process through transparent
       organizational policies and controls.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: EU-AI-ACT
     version: "2024/1689"
     ref: "Art.17"
@@ -34,4 +34,4 @@ mappings:
     rationale: >
       Art.17 requires a QMS including a compliance strategy and written policies; broader
       than, but encompassing, an AI policy for high-risk providers.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"

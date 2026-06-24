@@ -16,7 +16,7 @@ mappings:
     rationale: >
       ISO/IEC 42001 is a management-system standard and contains no control specific to
       labelling AI-generated or synthetic content; this obligation has no clean equivalent.
-    reviewer: "vinod"
+    reviewer: "Vinod Dhiman"
   - framework: NIST-AI-RMF
     version: "1.0"
     ref: null
@@ -26,7 +26,7 @@ mappings:
     rationale: >
       The NIST AI RMF addresses transparency as an outcome but does not prescribe
       synthetic-content disclosure or marking; no direct subcategory corresponds.
-    reviewer: "vinod"
+    reviewer: "Vinod Dhiman"
   - framework: EU-AI-ACT
     version: "2024/1689"
     ref: "Art.50"
@@ -36,4 +36,4 @@ mappings:
     rationale: >
       Article 50 imposes marking/disclosure duties for synthetic media and certain
       interactions; the obligation remains live for the 2 Aug 2026 application date.
-    reviewer: "vinod"
+    reviewer: "Vinod Dhiman"

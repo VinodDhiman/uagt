@@ -13,7 +13,7 @@ mappings:
     confidence: high
     rationale: >
       A.6.2.4 directly requires verification and validation of AI systems.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: NIST-AI-RMF
     version: "1.0"
     ref: "MEASURE-2.1"
@@ -23,7 +23,7 @@ mappings:
     rationale: >
       MEASURE 2.1 (with 2.3) documents test sets, metrics, and TEVV tools used for
       evaluation.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: EU-AI-ACT
     version: "2024/1689"
     ref: "Art.15"
@@ -33,4 +33,4 @@ mappings:
     rationale: >
       Art.15 implies testing of accuracy/robustness; formal conformity testing sits in
       Art.43, so coverage of a general TEVV control is partial.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"

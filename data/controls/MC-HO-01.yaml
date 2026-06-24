@@ -14,7 +14,7 @@ mappings:
     rationale: >
       Annex A.9 addresses responsible use and accountable deployment but does not
       prescribe per-decision human intervention controls, so coverage is partial.
-    reviewer: "vinod"
+    reviewer: "Vinod Dhiman"
   - framework: NIST-AI-RMF
     version: "1.0"
     ref: "GOVERN-3.2"
@@ -24,7 +24,7 @@ mappings:
     rationale: >
       GOVERN-3.2 requires policies for human-AI configurations and oversight roles;
       it sets the governance expectation but not the operational intervention capability.
-    reviewer: "vinod"
+    reviewer: "Vinod Dhiman"
   - framework: EU-AI-ACT
     version: "2024/1689"
     ref: "Art.14"
@@ -34,4 +34,4 @@ mappings:
     rationale: >
       Article 14 requires high-risk AI systems to be designed for effective human
       oversight, including intervention and stop capability - a direct match.
-    reviewer: "vinod"
+    reviewer: "Vinod Dhiman"

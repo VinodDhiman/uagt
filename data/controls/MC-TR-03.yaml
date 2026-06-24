@@ -13,7 +13,7 @@ mappings:
     confidence: high
     rationale: >
       A.6.2.7 requires technical documentation of the AI system across its life cycle.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: NIST-AI-RMF
     version: "1.0"
     ref: "MAP-2.3"
@@ -23,7 +23,7 @@ mappings:
     rationale: >
       NIST treats documentation as cross-cutting and has no single technical-documentation
       subcategory; coverage is partial.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: EU-AI-ACT
     version: "2024/1689"
     ref: "Art.11"
@@ -32,4 +32,4 @@ mappings:
     confidence: high
     rationale: >
       Art.11 with Annex IV prescribes technical documentation for high-risk systems.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"

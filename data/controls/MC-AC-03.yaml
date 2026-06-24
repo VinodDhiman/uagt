@@ -14,7 +14,7 @@ mappings:
     rationale: >
       A.4.2 documents AI resources but is not a system-of-record inventory; coverage is
       partial.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: NIST-AI-RMF
     version: "1.0"
     ref: "GOVERN-1.6"
@@ -24,7 +24,7 @@ mappings:
     rationale: >
       GOVERN 1.6 directly requires mechanisms to inventory AI systems, resourced by risk
       priority.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: EU-AI-ACT
     version: "2024/1689"
     ref: "Art.49"
@@ -34,4 +34,4 @@ mappings:
     rationale: >
       Art.49 requires registration of high-risk systems in the EU database (Art.71); an
       external register for in-scope systems, narrower than an internal inventory.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"

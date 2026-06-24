@@ -14,7 +14,7 @@ mappings:
     rationale: >
       A.4.6 (with clause 7.2 competence) addresses the competence of human resources for
       AI systems.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: NIST-AI-RMF
     version: "1.0"
     ref: "GOVERN-2.2"
@@ -23,7 +23,7 @@ mappings:
     confidence: high
     rationale: >
       GOVERN 2.2 requires that personnel and partners receive AI risk-management training.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: EU-AI-ACT
     version: "2024/1689"
     ref: "Art.4"
@@ -33,4 +33,4 @@ mappings:
     rationale: >
       Art.4 obliges providers and deployers to ensure a sufficient level of AI literacy
       among staff operating AI systems.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"

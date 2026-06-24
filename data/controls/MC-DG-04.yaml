@@ -14,7 +14,7 @@ mappings:
     rationale: >
       ISO/IEC 42001 manages data resources but defers privacy-specific controls to ISO/IEC
       27701 and external regimes; coverage is partial.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: NIST-AI-RMF
     version: "1.0"
     ref: "MEASURE-2.10"
@@ -23,7 +23,7 @@ mappings:
     confidence: medium
     rationale: >
       MEASURE 2.10 requires privacy risk to be examined and documented.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: EU-AI-ACT
     version: "2024/1689"
     ref: "Art.10"
@@ -33,4 +33,4 @@ mappings:
     rationale: >
       Art.10(5) conditions special-category data processing; broader privacy obligations
       sit in the GDPR outside the AI Act, hence partial.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"

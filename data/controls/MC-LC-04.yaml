@@ -13,7 +13,7 @@ mappings:
     confidence: high
     rationale: >
       A.6.2.8 requires recording of event logs over the AI system life cycle.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: NIST-AI-RMF
     version: "1.0"
     ref: "MANAGE-4.1"
@@ -23,7 +23,7 @@ mappings:
     rationale: >
       NIST captures logging within monitoring (MANAGE 4.1 / MEASURE 2.4) rather than as a
       discrete record-keeping control.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: EU-AI-ACT
     version: "2024/1689"
     ref: "Art.12"
@@ -33,4 +33,4 @@ mappings:
     rationale: >
       Art.12 requires automatic recording of logs; Art.19 and Art.26(6) add provider and
       deployer log-retention duties.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"

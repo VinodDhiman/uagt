@@ -14,7 +14,7 @@ mappings:
     rationale: >
       A.9.4 (with A.9.2 responsible use) constrains use to intended purpose; operator
       competence is implied rather than prescribed.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: NIST-AI-RMF
     version: "1.0"
     ref: "MAP-3.5"
@@ -24,7 +24,7 @@ mappings:
     rationale: >
       MAP 3.5 (with MAP 3.4 operator proficiency) defines and assesses human-oversight
       processes per GOVERN policies.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: EU-AI-ACT
     version: "2024/1689"
     ref: "Art.26"
@@ -34,4 +34,4 @@ mappings:
     rationale: >
       Art.26 requires deployers to assign competent human oversight and use the system per
       its instructions.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"

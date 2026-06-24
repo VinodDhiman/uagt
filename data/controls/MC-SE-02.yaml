@@ -14,7 +14,7 @@ mappings:
     rationale: >
       ISO/IEC 42001 defers information-security controls to ISO/IEC 27001; Annex A
       contains no dedicated AI cybersecurity control, so there is no clean equivalent.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: NIST-AI-RMF
     version: "1.0"
     ref: "MEASURE-2.7"
@@ -23,7 +23,7 @@ mappings:
     confidence: high
     rationale: >
       MEASURE 2.7 requires security and resilience to be evaluated and documented.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: EU-AI-ACT
     version: "2024/1689"
     ref: "Art.15"
@@ -33,4 +33,4 @@ mappings:
     rationale: >
       Art.15 binds cybersecurity, including resilience to adversarial manipulation, for
       high-risk systems.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"

@@ -13,7 +13,7 @@ mappings:
     confidence: high
     rationale: >
       A.6.2.6 (with A.6.2.5 deployment) covers operation and monitoring of AI systems.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: NIST-AI-RMF
     version: "1.0"
     ref: "MANAGE-4.1"
@@ -23,7 +23,7 @@ mappings:
     rationale: >
       MANAGE 4.1 requires post-deployment monitoring plans covering capture, appeal,
       incident, and change.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: EU-AI-ACT
     version: "2024/1689"
     ref: "Art.72"
@@ -33,4 +33,4 @@ mappings:
     rationale: >
       Art.72 requires providers to establish and document a post-market monitoring system
       and plan.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"

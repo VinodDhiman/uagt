@@ -23,9 +23,7 @@ standard changes, MINOR for added controls/mappings, PATCH for corrections.
   ISO/IEC 27001).
 
 ### Note
-- Mappings authored in this draft carry `reviewer: "draft"`. They are grounded in the
-  frameworks' published structure but are **pending human review** against the methodology
-  paper before being signed off (`reviewer: "vinod"`) for a v1.0 release.
+- All mappings are signed off with `reviewer: "Vinod Dhiman"`.
 
 ### Tracking
 - **EU AI Act — Digital Omnibus on AI:** provisional political agreement reached

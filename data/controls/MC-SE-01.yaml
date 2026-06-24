@@ -14,7 +14,7 @@ mappings:
     rationale: >
       A.6.2.4 covers verification and validation; accuracy/robustness performance levels
       are not a discrete Annex A control.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: NIST-AI-RMF
     version: "1.0"
     ref: "MEASURE-2.5"
@@ -24,7 +24,7 @@ mappings:
     rationale: >
       MEASURE 2.5 (with 2.3, 2.6) demonstrates validity, reliability, and safe behavior
       under deployment-like conditions.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: EU-AI-ACT
     version: "2024/1689"
     ref: "Art.15"
@@ -33,4 +33,4 @@ mappings:
     confidence: high
     rationale: >
       Art.15 binds appropriate accuracy and robustness for high-risk systems.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"

@@ -14,7 +14,7 @@ mappings:
     rationale: >
       A.8.4 (with A.8.3 external reporting and clause 10.2 corrective action) covers
       incident communication and correction.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: NIST-AI-RMF
     version: "1.0"
     ref: "MANAGE-4.3"
@@ -24,7 +24,7 @@ mappings:
     rationale: >
       MANAGE 4.3 requires incidents and errors to be communicated with tracking and
       recovery documented.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: EU-AI-ACT
     version: "2024/1689"
     ref: "Art.73"
@@ -34,4 +34,4 @@ mappings:
     rationale: >
       Art.73 requires providers to report serious incidents to market-surveillance
       authorities.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"

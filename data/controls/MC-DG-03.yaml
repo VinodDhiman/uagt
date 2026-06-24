@@ -12,7 +12,7 @@ mappings:
     relationship: full
     confidence: high
     rationale: "Annex A.7.4 directly addresses data quality and provenance."
-    reviewer: "vinod"
+    reviewer: "Vinod Dhiman"
   - framework: NIST-AI-RMF
     version: "1.0"
     ref: "MAP-2.3"
@@ -20,7 +20,7 @@ mappings:
     relationship: partial
     confidence: medium
     rationale: "Covers documentation of data; quality thresholds implied, not prescribed."
-    reviewer: "vinod"
+    reviewer: "Vinod Dhiman"
   - framework: EU-AI-ACT
     version: "2024/1689"
     ref: "Art.10"
@@ -28,4 +28,4 @@ mappings:
     relationship: full
     confidence: high
     rationale: "Article 10 sets binding data governance requirements for high-risk systems."
-    reviewer: "vinod"
+    reviewer: "Vinod Dhiman"

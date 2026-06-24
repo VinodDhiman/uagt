@@ -13,7 +13,7 @@ mappings:
     confidence: high
     rationale: >
       A.8.2 requires system documentation and information for users of the AI system.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: NIST-AI-RMF
     version: "1.0"
     ref: "MEASURE-2.8"
@@ -23,7 +23,7 @@ mappings:
     rationale: >
       MEASURE 2.8 (with 2.9 explainability) examines transparency and accountability of
       system behavior.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
   - framework: EU-AI-ACT
     version: "2024/1689"
     ref: "Art.13"
@@ -33,4 +33,4 @@ mappings:
     rationale: >
       Art.13 requires high-risk systems to be transparent and accompanied by instructions
       for use for deployers.
-    reviewer: "draft"
+    reviewer: "Vinod Dhiman"
