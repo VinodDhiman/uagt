@@ -5,8 +5,8 @@ type: dataset
 authors:
   - given-names: Vinod
     family-names: Dhiman
-repository-code: "https://github.com/VinodDhiman/uagt"
-url: "https://github.com/VinodDhiman/uagt"
+repository-code: "https://github.com/open-ai-governance/uagt"
+url: "https://github.com/open-ai-governance/uagt"
 doi: "10.5281/zenodo.20823079"  # concept DOI — always resolves to the latest version
 abstract: >
   An open, machine-readable, citable, and continuously versioned crosswalk across
