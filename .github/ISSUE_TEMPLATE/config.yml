@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Contribution guide
+    url: https://github.com/open-ai-governance/uagt/blob/main/CONTRIBUTING.md
+    about: How mappings are structured, reviewed, and merged.
+  - name: Governance & review standard
+    url: https://github.com/open-ai-governance/uagt/blob/main/GOVERNANCE.md
+    about: How decisions are made and what every mapping change must include.

@@ -10,6 +10,13 @@ standard changes, MINOR for added controls/mappings, PATCH for corrections.
 
 ## [Unreleased]
 
+### Added
+- `tests/` — pytest contract suite locking the validation guarantees (schema, FR1 three-way
+  coverage, manifest version pins, relationship/`none` rules), reproducibility (deterministic
+  JSON + OSCAL UUIDs), and OSCAL catalog shape. Run in CI before every merge.
+- Contribution scaffolding: PR template (rationale/reviewer + CI checklist) and issue forms
+  for mapping corrections and new controls.
+
 ## [1.1.0] - 2026-06-24
 
 ### Added

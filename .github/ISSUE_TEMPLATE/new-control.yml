@@ -1,0 +1,42 @@
+name: New Master Control
+description: Propose a new Master Control for one of the eight UAGT domains
+title: "[control] <short title>"
+labels: ["new-control", "needs-review"]
+body:
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Governance domain
+      options:
+        - "d1-accountability-governance"
+        - "d2-risk-impact-assessment"
+        - "d3-data-governance-quality"
+        - "d4-transparency-documentation"
+        - "d5-human-oversight"
+        - "d6-robustness-accuracy-security"
+        - "d7-lifecycle-monitoring"
+        - "d8-value-chain-gpai"
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Proposed control title
+    validations:
+      required: true
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: What does the control achieve, in your own words?
+    validations:
+      required: true
+  - type: textarea
+    id: mappings
+    attributes:
+      label: Proposed mappings (all three frameworks)
+      description: |
+        For each of ISO/IEC 42001, NIST AI RMF, and the EU AI Act: identifier, relationship,
+        confidence, and a one-line rationale. Use `none` where there is no equivalent.
+    validations:
+      required: true

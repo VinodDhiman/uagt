@@ -84,6 +84,7 @@ scripts/build_tables.py    YAML -> Markdown / CSV / XLSX / JSON
 scripts/build_site.py      YAML -> searchable static site (site/index.html)
 scripts/build_oscal.py     YAML -> OSCAL 1.1.2 catalog (build/oscal/uagt-catalog.json)
 scripts/collect_metrics.py organic adoption metrics -> /evidence/ (run on a schedule)
+tests/                 pytest contract tests (validation, reproducibility, OSCAL)
 docs/                  rendered crosswalk + methodology (committed)
 site/                  built static site (regenerated; not committed)
 evidence/              timestamped metric snapshots + dashboard (committed)

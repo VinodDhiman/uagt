@@ -1,0 +1,39 @@
+name: Mapping correction
+description: Propose a correction to an existing crosswalk mapping
+title: "[mapping] <MC-Dx-NN>: <short summary>"
+labels: ["mapping", "needs-review"]
+body:
+  - type: input
+    id: control
+    attributes:
+      label: Master Control id
+      placeholder: "MC-D3-03"
+    validations:
+      required: true
+  - type: dropdown
+    id: framework
+    attributes:
+      label: Framework
+      options: ["ISO-IEC-42001", "NIST-AI-RMF", "EU-AI-ACT"]
+    validations:
+      required: true
+  - type: dropdown
+    id: relationship
+    attributes:
+      label: Proposed relationship
+      options: ["full", "partial", "superset", "subset", "none"]
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Why is the proposed mapping correct? Reference identifiers only — do not paste standard text.
+    validations:
+      required: true
+  - type: input
+    id: reviewer
+    attributes:
+      label: Your name (reviewer)
+    validations:
+      required: true

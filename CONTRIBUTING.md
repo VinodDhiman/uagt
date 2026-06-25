@@ -47,13 +47,15 @@ maintainer decision tied to a changelog entry (see [GOVERNANCE.md](GOVERNANCE.md
 ## Workflow
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 # make your change in data/controls/ or data/source-manifest.yaml
-python scripts/build_tables.py --check   # must pass — this is the CI gate
-python scripts/build_tables.py           # regenerate docs/ outputs to include in the PR
+python -m pytest -q                       # contract tests must pass
+python scripts/build_tables.py --check    # must pass — this is the CI gate
+python scripts/build_tables.py            # regenerate docs/ outputs to include in the PR
 ```
 
-Open a pull request. CI re-runs `--check` and a dry-run build; merge is blocked until
-both are clean and a maintainer has reviewed the rationale on each changed mapping.
+Open a pull request (the template prompts for the rationale and reviewer). CI re-runs the
+tests, `--check`, and a dry-run build of every output; merge is blocked until all are clean
+and a maintainer has reviewed the rationale on each changed mapping.
 
 Contributors are credited in releases and in the citation metadata.
