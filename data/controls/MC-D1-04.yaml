@@ -38,3 +38,13 @@ mappings:
       Art.4 obliges providers and deployers to ensure a sufficient level of AI literacy
       among staff.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: "A.6.3"
+    label: "Information security awareness, education and training"
+    relationship: partial
+    confidence: medium
+    rationale: >
+      A.6.3 mandates security awareness and training; it parallels AI literacy and training
+      but is scoped to information security.
+    reviewer: "Vinod Dhiman"

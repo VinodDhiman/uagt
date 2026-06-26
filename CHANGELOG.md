@@ -11,6 +11,15 @@ standard changes, MINOR for added controls/mappings, PATCH for corrections.
 ## [Unreleased]
 
 ### Added
+- **ISO/IEC 27001:2022 attached as a 4th, optional framework** — demonstrating that the
+  normalized Master Control Set lets a new framework map in cheaply without touching the
+  anchor mappings. Initial coverage on 10 controls where a genuine ISMS equivalent exists
+  (governance, asset inventory, training, PII, logging, security, monitoring, incidents,
+  suppliers). Notably it fills `MC-D6-03` (security), where ISO/IEC 42001 is `none` because
+  it defers security to ISO/IEC 27001 — now a `superset` mapping. 94 mappings total.
+- The three anchors (ISO 42001 / NIST AI RMF / EU AI Act) remain **required** on every
+  control (FR1); optional frameworks attach only where an equivalent exists. New
+  `REQUIRED_FRAMEWORKS` vs display `FRAMEWORK_ORDER` distinction, enforced and tested.
 - `tests/` — pytest contract suite locking the validation guarantees (schema, FR1 three-way
   coverage, manifest version pins, relationship/`none` rules), reproducibility (deterministic
   JSON + OSCAL UUIDs), and OSCAL catalog shape. Run in CI before every merge.

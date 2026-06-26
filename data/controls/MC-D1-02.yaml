@@ -40,3 +40,13 @@ mappings:
       Art.16 with Art.26 allocates accountability by role; statutory obligations rather than
       an internal RACI.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: "A.5.2"
+    label: "Information security roles and responsibilities"
+    relationship: full
+    confidence: high
+    rationale: >
+      A.5.2 defines and allocates security roles and responsibilities, directly analogous to
+      AI governance role assignment.
+    reviewer: "Vinod Dhiman"

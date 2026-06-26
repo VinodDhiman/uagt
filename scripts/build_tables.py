@@ -33,12 +33,16 @@ SCHEMA_PATH = ROOT / "schema" / "control.schema.json"
 DOCS_DIR = ROOT / "docs"
 BUILD_DIR = ROOT / "build"
 
-# Display order for frameworks (columns) and enums.
-FRAMEWORK_ORDER = ["ISO-IEC-42001", "NIST-AI-RMF", "EU-AI-ACT"]
+# The three anchor frameworks every Master Control must cover (FR1). Additional frameworks
+# (e.g. ISO/IEC 27001) attach optionally to the Master Control Set where an equivalent exists.
+REQUIRED_FRAMEWORKS = ["ISO-IEC-42001", "NIST-AI-RMF", "EU-AI-ACT"]
+# Display order for frameworks (columns): anchors first, then optional frameworks.
+FRAMEWORK_ORDER = REQUIRED_FRAMEWORKS + ["ISO-IEC-27001"]
 FRAMEWORK_LABELS = {
     "ISO-IEC-42001": "ISO/IEC 42001",
     "NIST-AI-RMF": "NIST AI RMF",
     "EU-AI-ACT": "EU AI Act",
+    "ISO-IEC-27001": "ISO/IEC 27001",
 }
 RELATIONSHIP_ORDER = ["full", "superset", "subset", "partial", "none"]
 # The eight UAGT regulation-stable governance domains (paper, Table 4). D-prefixed labels
@@ -117,8 +121,9 @@ def validate(controls: list[dict], manifest: dict) -> list[str]:
                     f"!= pinned '{allowed_versions[fw]}' in source-manifest.yaml"
                 )
 
-        # 5) FR1: every control covers all three frameworks (none is allowed, absent is not).
-        missing = [fw for fw in FRAMEWORK_ORDER if fw not in frameworks_present]
+        # 5) FR1: every control covers the three ANCHOR frameworks (none is allowed, absent
+        #    is not). Optional frameworks (e.g. ISO/IEC 27001) are not required everywhere.
+        missing = [fw for fw in REQUIRED_FRAMEWORKS if fw not in frameworks_present]
         if missing:
             problems.append(
                 f"{where}: FR1 three-way coverage missing for: {', '.join(missing)} "

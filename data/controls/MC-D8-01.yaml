@@ -37,3 +37,13 @@ mappings:
     rationale: >
       Art.25 allocates responsibilities along the AI value chain.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: "A.5.19"
+    label: "Information security in supplier relationships"
+    relationship: full
+    confidence: high
+    rationale: >
+      A.5.19 governs information security in supplier relationships, directly matching
+      third-party and supplier governance.
+    reviewer: "Vinod Dhiman"

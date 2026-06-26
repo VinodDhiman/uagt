@@ -25,11 +25,19 @@ def test_controls_exist():
     assert len(CONTROLS) >= 1
 
 
-def test_fr1_every_control_covers_all_three_frameworks():
+def test_fr1_every_control_covers_the_three_anchor_frameworks():
     for c in CONTROLS:
         fws = {m["framework"] for m in c["mappings"]}
-        missing = set(bt.FRAMEWORK_ORDER) - fws
+        missing = set(bt.REQUIRED_FRAMEWORKS) - fws
         assert not missing, f"{c['id']} missing {missing}"
+
+
+def test_optional_frameworks_are_not_required_everywhere():
+    # ISO/IEC 27001 is an attached framework: in the display order, not in the required set.
+    assert "ISO-IEC-27001" in bt.FRAMEWORK_ORDER
+    assert "ISO-IEC-27001" not in bt.REQUIRED_FRAMEWORKS
+    # and at least one control actually uses it (the attachment is real, not just declared)
+    assert any(m["framework"] == "ISO-IEC-27001" for c in CONTROLS for m in c["mappings"])
 
 
 def test_versions_match_pinned_manifest():
@@ -77,7 +85,7 @@ def _bad(**overrides):
             {"framework": fw, "version": ALLOWED_VERSIONS[fw], "ref": "X.1", "label": "x",
              "relationship": "full", "confidence": "high",
              "rationale": "rationale long enough", "reviewer": "tester"}
-            for fw in bt.FRAMEWORK_ORDER
+            for fw in bt.REQUIRED_FRAMEWORKS
         ],
     }
     base.update(overrides)

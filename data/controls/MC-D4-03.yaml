@@ -38,3 +38,13 @@ mappings:
     rationale: >
       Art.12 with Art.19 and Art.26(6) requires automatic logging and retention.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: "A.8.15"
+    label: "Logging"
+    relationship: full
+    confidence: high
+    rationale: >
+      A.8.15 requires the production and protection of logs, a direct match for AI event-log
+      record-keeping.
+    reviewer: "Vinod Dhiman"

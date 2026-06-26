@@ -38,3 +38,14 @@ mappings:
     rationale: >
       Art.15 binds cybersecurity, including resilience to adversarial manipulation.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: "A.8"
+    label: "Technological controls (Annex A)"
+    relationship: superset
+    confidence: high
+    rationale: >
+      ISO/IEC 27001's ISMS comprehensively governs information security and cybersecurity
+      (Annex A.8 technological controls and related organizational controls), broader than
+      this single AI control - which is exactly why ISO/IEC 42001 defers security to 27001.
+    reviewer: "Vinod Dhiman"

@@ -42,6 +42,20 @@ frameworks:
           Omnibus tracked in the changelog until publication triggers a MAJOR version bump.
     notes: "Referenced by Article number only; text not reproduced."
 
+  # ISO/IEC 27001 is an OPTIONAL attached framework (not part of the required three-way
+  # coverage). It demonstrates the normalized control layer's extensibility: a new framework
+  # maps to the Master Control Set where a genuine equivalent exists, without disturbing the
+  # anchor mappings. Coverage is partial/in-progress, concentrated where 27001's ISMS controls
+  # apply (security, logging, incidents, suppliers, governance).
+  - id: ISO-IEC-27001
+    name: "ISO/IEC 27001:2022 - Information security management system"
+    version: "2022"
+    structure: "Management-system clauses (4-10) + Annex A: 93 controls in 4 themes (A.5 Organizational, A.6 People, A.7 Physical, A.8 Technological)"
+    issuer: "ISO/IEC"
+    obtain_from: "https://www.iso.org/standard/27001"
+    required: false
+    notes: "Referenced by Annex A control id only; text not reproduced."
+
 # Companion sources referenced in rationale but not themselves mapped targets. They inform
 # specific domains (e.g. ISO/IEC 42005 for D2 impact assessment; the NIST Generative AI
 # Profile for D8 GPAI). Mappings still resolve only to the three anchor frameworks above.

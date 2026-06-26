@@ -37,3 +37,13 @@ mappings:
     rationale: >
       Art.73 requires providers to report serious incidents to authorities.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: "A.5.24"
+    label: "Information security incident management planning and preparation"
+    relationship: full
+    confidence: high
+    rationale: >
+      A.5.24 with A.5.25-A.5.26 establishes incident management planning, assessment, and
+      response - a strong match for incident reporting and corrective action.
+    reviewer: "Vinod Dhiman"

@@ -39,3 +39,13 @@ mappings:
       Art.49 requires registration of high-risk systems in the EU database (Art.71); an
       external register, narrower than an internal inventory.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: "A.5.9"
+    label: "Inventory of information and other associated assets"
+    relationship: partial
+    confidence: medium
+    rationale: >
+      A.5.9 requires an inventory of assets; AI systems are governable assets, so the
+      inventory pattern transfers, though it is not AI-specific.
+    reviewer: "Vinod Dhiman"

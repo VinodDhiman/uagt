@@ -36,9 +36,14 @@ the structure this repository encodes. See
 
 The spine is the **Master Control Set (MCS)** — a normalized catalog of governance
 controls organised into the eight UAGT domains, each expressed once and mapped *outward* to
-the three source frameworks. Every control carries the traceability spine: an upward
-`principle`, sideways framework `mappings`, and forward `evidence` artefacts. New frameworks
-(ISO 27001, SOC 2, …) can attach later without disturbing existing mappings.
+the source frameworks. Every control carries the traceability spine: an upward `principle`,
+sideways framework `mappings`, and forward `evidence` artefacts.
+
+The three anchor frameworks (ISO/IEC 42001, NIST AI RMF, EU AI Act) are **required** on
+every control (FR1). Further frameworks attach *optionally* to the Master Control Set where
+a genuine equivalent exists, without disturbing the anchor mappings — **ISO/IEC 27001:2022**
+is already attached this way (e.g. it fills the security gap where ISO/IEC 42001 defers to
+27001 — see `MC-D6-03`). The same mechanism extends to SOC 2 and others later.
 
 Each mapping records the **nature** of correspondence — `full` / `partial` / `superset`
 / `subset` / `none` — plus a rationale, confidence, and reviewer. The `none` flags are

@@ -37,3 +37,13 @@ mappings:
     rationale: >
       Art.72 requires a documented post-market monitoring system and plan.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: "A.8.16"
+    label: "Monitoring activities"
+    relationship: partial
+    confidence: medium
+    rationale: >
+      A.8.16 requires monitoring of systems for anomalous behaviour; it supports operational
+      monitoring but is security-focused, not full lifecycle and post-market surveillance.
+    reviewer: "Vinod Dhiman"

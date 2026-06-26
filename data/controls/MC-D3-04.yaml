@@ -38,3 +38,13 @@ mappings:
       Art.10(5) conditions special-category processing; broader privacy duties sit in the
       GDPR.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: "A.5.34"
+    label: "Privacy and protection of PII"
+    relationship: partial
+    confidence: medium
+    rationale: >
+      A.5.34 requires privacy and protection of personally identifiable information; deeper
+      privacy controls live in ISO/IEC 27701.
+    reviewer: "Vinod Dhiman"

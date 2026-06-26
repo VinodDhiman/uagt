@@ -39,3 +39,13 @@ mappings:
       Art.17 requires a QMS including a compliance strategy and written policies; broader
       than a single AI policy.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: "A.5.1"
+    label: "Policies for information security"
+    relationship: partial
+    confidence: medium
+    rationale: >
+      ISO/IEC 27001 A.5.1 establishes information-security policies; the same management-
+      system pattern underpins an AI policy, though the governed subject differs.
+    reviewer: "Vinod Dhiman"
