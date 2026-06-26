@@ -10,6 +10,8 @@ standard changes, MINOR for added controls/mappings, PATCH for corrections.
 
 ## [Unreleased]
 
+## [2.3.0] - 2026-06-26
+
 ### Added
 - **Reverse-coverage index** (`docs/reverse-coverage.md` + `scripts/build_reverse_coverage.py`,
   with `data/source-inventory.yaml`): from each source element back to the Master Controls,
