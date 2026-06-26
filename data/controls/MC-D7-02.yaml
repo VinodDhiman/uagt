@@ -47,3 +47,13 @@ mappings:
       A.5.24 with A.5.25-A.5.26 establishes incident management planning, assessment, and
       response - a strong match for incident reporting and corrective action.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: "CC7.4"
+    label: "Responds to identified security incidents"
+    relationship: full
+    confidence: medium
+    rationale: >
+      CC7.3-CC7.5 establish incident evaluation, response, and recovery - a strong match for
+      incident reporting and corrective action.
+    reviewer: "Vinod Dhiman"

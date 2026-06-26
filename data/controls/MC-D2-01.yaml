@@ -48,3 +48,13 @@ mappings:
       the methodology aligns but its scope is information-security risk, not the full
       breadth of AI risk.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: "CC3.2"
+    label: "Identifies and analyzes risk"
+    relationship: partial
+    confidence: medium
+    rationale: >
+      SOC 2 CC3 establishes a risk assessment process (CC3.2); methodology aligns but its
+      scope is trust-services (security) risk, not the breadth of AI risk.
+    reviewer: "Vinod Dhiman"

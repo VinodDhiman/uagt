@@ -48,3 +48,13 @@ mappings:
       Clause 7.2 requires competence of personnel; it partially supports operator competence
       but does not address human-AI configuration or oversight.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: "CC1.4"
+    label: "Commitment to competence"
+    relationship: partial
+    confidence: low
+    rationale: >
+      CC1.4 supports operator competence generally but does not address human-AI
+      configuration or oversight.
+    reviewer: "Vinod Dhiman"

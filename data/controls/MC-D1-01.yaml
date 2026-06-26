@@ -49,3 +49,13 @@ mappings:
       ISO/IEC 27001 A.5.1 establishes information-security policies; the same management-
       system pattern underpins an AI policy, though the governed subject differs.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: "CC5.3"
+    label: "Deploys control activities through policies and procedures"
+    relationship: partial
+    confidence: medium
+    rationale: >
+      SOC 2 CC5.3 deploys controls through policies and procedures; it establishes the
+      policy mechanism but is not an AI-specific policy.
+    reviewer: "Vinod Dhiman"

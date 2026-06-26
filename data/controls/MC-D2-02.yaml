@@ -47,3 +47,12 @@ mappings:
       ISO/IEC 27001 has no equivalent to an AI or fundamental-rights impact assessment; its
       risk focus is information-security impact to the organization.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: null
+    label: null
+    relationship: none
+    confidence: high
+    rationale: >
+      SOC 2 has no equivalent to an AI or fundamental-rights impact assessment.
+    reviewer: "Vinod Dhiman"

@@ -48,3 +48,14 @@ mappings:
       A.5.34 requires privacy and protection of personally identifiable information; deeper
       privacy controls live in ISO/IEC 27701.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: "P"
+    label: "Privacy category (P1-P8)"
+    relationship: partial
+    confidence: medium
+    rationale: >
+      SOC 2's Privacy category (P-series) addresses notice, choice, collection, use,
+      retention, and disposal of personal information; applies when Privacy is in the audit
+      scope, hence partial.
+    reviewer: "Vinod Dhiman"

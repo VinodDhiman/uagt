@@ -46,3 +46,13 @@ mappings:
       Data quality and preparation for AI fall outside ISO/IEC 27001's information-security
       scope.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: "PI1.2"
+    label: "Processing integrity - inputs are complete and accurate"
+    relationship: partial
+    confidence: low
+    rationale: >
+      SOC 2's Processing Integrity category concerns complete and accurate processing of
+      inputs; it partially touches data quality but not ML data governance.
+    reviewer: "Vinod Dhiman"

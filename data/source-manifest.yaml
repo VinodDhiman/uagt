@@ -56,6 +56,17 @@ frameworks:
     required: false
     notes: "Referenced by Annex A control id only; text not reproduced."
 
+  # SOC 2 (AICPA Trust Services Criteria) - a second OPTIONAL attached framework. Strong on
+  # security/governance/operations (Common Criteria), absent on AI-specific concerns.
+  - id: SOC-2
+    name: "AICPA SOC 2 - Trust Services Criteria (TSC)"
+    version: "2017"
+    structure: "Common Criteria CC1-CC9 (Security) + Availability (A1), Processing Integrity (PI1), Confidentiality (C1), Privacy (P1-P8)"
+    issuer: "AICPA"
+    obtain_from: "https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services"
+    required: false
+    notes: "2017 TSC (with 2022 revised points of focus). Referenced by criterion id only; text not reproduced."
+
 # Companion sources referenced in rationale but not themselves mapped targets. They inform
 # specific domains (e.g. ISO/IEC 42005 for D2 impact assessment; the NIST Generative AI
 # Profile for D8 GPAI). Mappings still resolve only to the three anchor frameworks above.

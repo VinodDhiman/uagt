@@ -45,3 +45,12 @@ mappings:
       ISO/IEC 27001 governs information assets but has no control for training-data
       provenance or lineage.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: null
+    label: null
+    relationship: none
+    confidence: high
+    rationale: >
+      SOC 2 has no control for training-data provenance or lineage.
+    reviewer: "Vinod Dhiman"

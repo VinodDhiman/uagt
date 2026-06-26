@@ -48,3 +48,13 @@ mappings:
       A.8.29 requires security testing during development and acceptance; it aligns with
       TEVV but is scoped to security testing.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: "CC8.1"
+    label: "Change management - testing prior to deployment"
+    relationship: partial
+    confidence: medium
+    rationale: >
+      CC8.1 requires changes to be tested and authorized before deployment; it aligns with
+      TEVV but is scoped to change/security testing.
+    reviewer: "Vinod Dhiman"

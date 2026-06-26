@@ -41,12 +41,14 @@ sideways framework `mappings`, and forward `evidence` artefacts.
 
 The three anchor frameworks (ISO/IEC 42001, NIST AI RMF, EU AI Act) are **required** on
 every control (FR1). Further frameworks attach *optionally* to the Master Control Set
-without disturbing the anchor mappings. **ISO/IEC 27001:2022** is attached across **all 28
-controls** — mapped where the ISMS aligns (governance, lifecycle, logging, security,
-incidents, suppliers) and flagged `none` where 27001 simply doesn't reach AI-specific
-concerns (data quality, bias, transparency, human oversight, GPAI). It fills the security
-gap where ISO/IEC 42001 defers to 27001 (`MC-D6-03`: 42001 `none` → 27001 `superset`). The
-same mechanism extends to SOC 2 and others later.
+without disturbing the anchor mappings. **ISO/IEC 27001:2022** and **SOC 2 (Trust Services
+Criteria)** are both attached across **all 28 controls** — mapped where each ISMS/trust
+framework aligns (governance, lifecycle, logging, security, incidents, suppliers) and
+flagged `none` where they don't reach AI-specific concerns (data quality, bias,
+transparency, human oversight, GPAI). Both independently fill the security gap where ISO/IEC
+42001 defers out (`MC-D6-03`: 42001 `none` → 27001 *and* SOC 2 `superset`). Their coverage
+shape — many `none`s on AI-specific controls — is itself the analytical point: a security
+ISMS is not an AI-governance framework. The same mechanism extends to further frameworks.
 
 Each mapping records the **nature** of correspondence — `full` / `partial` / `superset`
 / `subset` / `none` — plus a rationale, confidence, and reviewer. The `none` flags are

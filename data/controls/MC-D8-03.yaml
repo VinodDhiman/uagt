@@ -49,3 +49,12 @@ mappings:
     rationale: >
       ISO/IEC 27001 has no concept of general-purpose or foundation AI models.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: null
+    label: null
+    relationship: none
+    confidence: high
+    rationale: >
+      SOC 2 has no concept of general-purpose or foundation AI models.
+    reviewer: "Vinod Dhiman"

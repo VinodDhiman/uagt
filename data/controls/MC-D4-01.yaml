@@ -47,3 +47,13 @@ mappings:
       ISO/IEC 27001 has no control for transparency or provision of information to deployers
       and users of an AI system.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: "CC2.3"
+    label: "Communicates with external parties"
+    relationship: partial
+    confidence: low
+    rationale: >
+      CC2.3 covers external communication of objectives and responsibilities; it partially
+      supports providing information to deployers but not AI-output transparency.
+    reviewer: "Vinod Dhiman"

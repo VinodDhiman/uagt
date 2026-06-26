@@ -47,3 +47,13 @@ mappings:
       Model accuracy and reliability are AI-performance concerns outside ISO/IEC 27001's
       information-security scope.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: "PI1.5"
+    label: "Processing integrity - outputs are complete and accurate"
+    relationship: partial
+    confidence: medium
+    rationale: >
+      SOC 2's Processing Integrity (PI1.5) addresses complete and accurate outputs; a
+      partial analog for AI accuracy and reliability.
+    reviewer: "Vinod Dhiman"

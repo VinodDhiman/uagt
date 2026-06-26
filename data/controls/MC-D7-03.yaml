@@ -51,3 +51,13 @@ mappings:
       improvement) share the Harmonised Structure with ISO/IEC 42001 and fully provide this
       control.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: "CC4.2"
+    label: "Evaluates and communicates control deficiencies"
+    relationship: full
+    confidence: medium
+    rationale: >
+      CC4.1-CC4.2 (monitoring and deficiency remediation) provide performance evaluation and
+      continual improvement of the control environment.
+    reviewer: "Vinod Dhiman"

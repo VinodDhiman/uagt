@@ -10,6 +10,16 @@ standard changes, MINOR for added controls/mappings, PATCH for corrections.
 
 ## [Unreleased]
 
+### Added
+- **SOC 2 (AICPA Trust Services Criteria) attached as a 5th, optional framework, across all
+  28 controls** — a second demonstration of cheap framework attachment. Mapped to the Common
+  Criteria (CC1–CC9), Processing Integrity, and Privacy where they align (governance, vendor
+  risk, incidents, change management, monitoring, privacy) and `none` where SOC 2 doesn't
+  reach AI-specific concerns. Independently fills `MC-D6-03` security (`CC6.1` `superset`),
+  alongside ISO/IEC 27001. **140 mappings total** (63 full, 2 superset, 51 partial, 24 none).
+  The two security frameworks' `none`-heavy shape vs. the AI-governance anchors is itself an
+  analytical result surfaced by the crosswalk.
+
 ## [2.0.1] - 2026-06-26
 
 ### Added

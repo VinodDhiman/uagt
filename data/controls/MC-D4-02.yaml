@@ -47,3 +47,13 @@ mappings:
       AI technical documentation (EU Annex IV style) has no direct ISO/IEC 27001 equivalent;
       27001 documents an ISMS, not AI system design.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: null
+    label: null
+    relationship: none
+    confidence: medium
+    rationale: >
+      SOC 2 has no AI technical-documentation criterion; its system description documents
+      the service organization, not AI system design.
+    reviewer: "Vinod Dhiman"

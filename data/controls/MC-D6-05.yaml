@@ -49,3 +49,13 @@ mappings:
       A.8.25 with A.8.27 establishes a secure development lifecycle and secure engineering
       principles; aligns with responsible design but is security-scoped.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: "CC8.1"
+    label: "Change management / development lifecycle"
+    relationship: partial
+    confidence: medium
+    rationale: >
+      CC8.1 governs the development and change lifecycle (design, test, authorize), a
+      partial analog to responsible AI design and development.
+    reviewer: "Vinod Dhiman"

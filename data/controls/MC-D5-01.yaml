@@ -48,3 +48,12 @@ mappings:
       ISO/IEC 27001 has no human-oversight-of-AI control; its access and segregation
       controls serve a different purpose.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: null
+    label: null
+    relationship: none
+    confidence: high
+    rationale: >
+      SOC 2 has no human-oversight-of-AI control.
+    reviewer: "Vinod Dhiman"

@@ -48,3 +48,13 @@ mappings:
       A.6.3 mandates security awareness and training; it parallels AI literacy and training
       but is scoped to information security.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: "CC1.4"
+    label: "Commitment to competence"
+    relationship: partial
+    confidence: medium
+    rationale: >
+      CC1.4 (commitment to competence) supports training and capability, but is not AI-
+      literacy-specific.
+    reviewer: "Vinod Dhiman"

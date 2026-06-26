@@ -49,3 +49,14 @@ mappings:
       (Annex A.8 technological controls and related organizational controls), broader than
       this single AI control - which is exactly why ISO/IEC 42001 defers security to 27001.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: "CC6.1"
+    label: "Security - logical and physical access (Common Criteria)"
+    relationship: superset
+    confidence: high
+    rationale: >
+      SOC 2's Security category (Common Criteria CC6-CC7) comprehensively governs access,
+      security operations, and incident handling, broader than this single AI control -
+      independently filling the security gap ISO/IEC 42001 leaves.
+    reviewer: "Vinod Dhiman"

@@ -48,3 +48,13 @@ mappings:
       A.8.15 requires the production and protection of logs, a direct match for AI event-log
       record-keeping.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: "CC7.2"
+    label: "Monitors system components for anomalies (logging)"
+    relationship: partial
+    confidence: medium
+    rationale: >
+      CC7.2 relies on logging and monitoring of system components for anomalies; it supports
+      event record-keeping but is security-event-scoped.
+    reviewer: "Vinod Dhiman"

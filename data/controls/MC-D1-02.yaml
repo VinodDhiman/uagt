@@ -50,3 +50,13 @@ mappings:
       A.5.2 defines and allocates security roles and responsibilities, directly analogous to
       AI governance role assignment.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: "CC1.3"
+    label: "Establishes structures, reporting lines, authorities and responsibilities"
+    relationship: full
+    confidence: medium
+    rationale: >
+      CC1.3 requires management to establish structures, reporting lines, and assign
+      authorities and responsibilities - directly analogous to AI governance roles.
+    reviewer: "Vinod Dhiman"

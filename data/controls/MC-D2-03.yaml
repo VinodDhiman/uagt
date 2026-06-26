@@ -49,3 +49,13 @@ mappings:
       Clause 6.1.2 requires defined risk acceptance criteria, but scoped to information-
       security risk rather than AI risk generally.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: "CC3.1"
+    label: "Specifies objectives to enable risk identification (risk tolerances)"
+    relationship: partial
+    confidence: medium
+    rationale: >
+      CC3.1 requires specifying objectives with sufficient clarity to identify risk and
+      define tolerances; scoped to trust-services risk.
+    reviewer: "Vinod Dhiman"

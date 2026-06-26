@@ -46,3 +46,12 @@ mappings:
     rationale: >
       Representativeness and bias examination have no ISO/IEC 27001 equivalent.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: null
+    label: null
+    relationship: none
+    confidence: high
+    rationale: >
+      Representativeness and bias examination have no SOC 2 equivalent.
+    reviewer: "Vinod Dhiman"

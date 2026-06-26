@@ -47,3 +47,12 @@ mappings:
       ISO/IEC 27001 has no control for marking or disclosing AI-generated or synthetic
       content.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: null
+    label: null
+    relationship: none
+    confidence: high
+    rationale: >
+      SOC 2 has no control for marking or disclosing AI-generated or synthetic content.
+    reviewer: "Vinod Dhiman"

@@ -47,3 +47,13 @@ mappings:
       A.5.19 governs information security in supplier relationships, directly matching
       third-party and supplier governance.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: "CC9.2"
+    label: "Assesses and manages vendor and business partner risks"
+    relationship: full
+    confidence: high
+    rationale: >
+      CC9.2 directly governs vendor and business-partner risk - a strong match for third-
+      party and supplier governance.
+    reviewer: "Vinod Dhiman"

@@ -47,3 +47,13 @@ mappings:
       ISO/IEC 27001's supply-chain controls (A.5.19-A.5.22) address suppliers, not
       downstream-customer handoff of residual AI risk.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: "CC2.3"
+    label: "External communication / complementary user-entity controls"
+    relationship: partial
+    confidence: medium
+    rationale: >
+      SOC 2 reports define complementary user-entity controls - responsibilities to be
+      performed by the customer - partially matching downstream handoff of residual risk.
+    reviewer: "Vinod Dhiman"

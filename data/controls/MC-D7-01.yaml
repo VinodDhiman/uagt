@@ -47,3 +47,13 @@ mappings:
       A.8.16 requires monitoring of systems for anomalous behaviour; it supports operational
       monitoring but is security-focused, not full lifecycle and post-market surveillance.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: "CC7.2"
+    label: "Monitors system components for anomalies"
+    relationship: partial
+    confidence: medium
+    rationale: >
+      CC7.2 (with CC4.1) provides ongoing operational monitoring; it supports post-
+      deployment monitoring but is security-focused, not AI post-market surveillance.
+    reviewer: "Vinod Dhiman"

@@ -49,3 +49,13 @@ mappings:
       A.5.9 requires an inventory of assets; AI systems are governable assets, so the
       inventory pattern transfers, though it is not AI-specific.
     reviewer: "Vinod Dhiman"
+  - framework: SOC-2
+    version: "2017"
+    ref: null
+    label: null
+    relationship: none
+    confidence: high
+    rationale: >
+      SOC 2 requires a system description and boundaries but has no asset-inventory
+      criterion equivalent to an AI system register.
+    reviewer: "Vinod Dhiman"
