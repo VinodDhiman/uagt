@@ -10,6 +10,8 @@ standard changes, MINOR for added controls/mappings, PATCH for corrections.
 
 ## [Unreleased]
 
+## [2.1.0] - 2026-06-26
+
 ### Added
 - **SOC 2 (AICPA Trust Services Criteria) attached as a 5th, optional framework, across all
   28 controls** — a second demonstration of cheap framework attachment. Mapped to the Common
