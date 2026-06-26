@@ -17,44 +17,44 @@ Source baseline (manifest `0.1.0`, updated 2026-06-23): ISO/IEC 42001 2023, NIST
 
 | Master Control | ISO/IEC 42001 | NIST AI RMF | EU AI Act | ISO/IEC 27001 |
 | --- | --- | --- | --- | --- |
-| **MC-D2-01** AI risk assessment and treatment | `8.2` (full) | `MANAGE-1.1` (partial) | `Art.9` (full) | — |
-| **MC-D2-02** AI system impact assessment | `A.5.2` (full) | `MAP-5.1` (full) | `Art.27` (full) | — |
-| **MC-D2-03** Risk tolerance and acceptance criteria | `6.1` (partial) | `GOVERN-1.3` (full) | `Art.9` (partial) | — |
+| **MC-D2-01** AI risk assessment and treatment | `8.2` (full) | `MANAGE-1.1` (partial) | `Art.9` (full) | `6.1.2` (partial) |
+| **MC-D2-02** AI system impact assessment | `A.5.2` (full) | `MAP-5.1` (full) | `Art.27` (full) | `—` (none) |
+| **MC-D2-03** Risk tolerance and acceptance criteria | `6.1` (partial) | `GOVERN-1.3` (full) | `Art.9` (partial) | `6.1.2` (partial) |
 
 ## D3 — Data governance & quality
 
 | Master Control | ISO/IEC 42001 | NIST AI RMF | EU AI Act | ISO/IEC 27001 |
 | --- | --- | --- | --- | --- |
-| **MC-D3-01** Data acquisition and provenance | `A.7.5` (full) | `MAP-2.3` (partial) | `Art.10` (full) | — |
-| **MC-D3-02** Data quality and preparation | `A.7.4` (full) | `MAP-2.3` (partial) | `Art.10` (full) | — |
-| **MC-D3-03** Data representativeness and bias examination | `A.7.4` (partial) | `MEASURE-2.11` (full) | `Art.10` (full) | — |
+| **MC-D3-01** Data acquisition and provenance | `A.7.5` (full) | `MAP-2.3` (partial) | `Art.10` (full) | `—` (none) |
+| **MC-D3-02** Data quality and preparation | `A.7.4` (full) | `MAP-2.3` (partial) | `Art.10` (full) | `—` (none) |
+| **MC-D3-03** Data representativeness and bias examination | `A.7.4` (partial) | `MEASURE-2.11` (full) | `Art.10` (full) | `—` (none) |
 | **MC-D3-04** Privacy and personal data protection | `A.4.3` (partial) | `MEASURE-2.10` (full) | `Art.10` (partial) | `A.5.34` (partial) |
 
 ## D4 — Transparency, documentation & records
 
 | Master Control | ISO/IEC 42001 | NIST AI RMF | EU AI Act | ISO/IEC 27001 |
 | --- | --- | --- | --- | --- |
-| **MC-D4-01** Transparency and information to deployers and users | `A.8.2` (full) | `MEASURE-2.8` (full) | `Art.13` (full) | — |
-| **MC-D4-02** Technical documentation | `A.6.2.7` (full) | `MAP-2.3` (partial) | `Art.11` (full) | — |
+| **MC-D4-01** Transparency and information to deployers and users | `A.8.2` (full) | `MEASURE-2.8` (full) | `Art.13` (full) | `—` (none) |
+| **MC-D4-02** Technical documentation | `A.6.2.7` (full) | `MAP-2.3` (partial) | `Art.11` (full) | `—` (none) |
 | **MC-D4-03** Record-keeping and event logging | `A.6.2.8` (full) | `MANAGE-4.1` (partial) | `Art.12` (full) | `A.8.15` (full) |
-| **MC-D4-04** Disclosure of AI-generated and synthetic content | `—` (none) | `—` (none) | `Art.50` (full) | — |
+| **MC-D4-04** Disclosure of AI-generated and synthetic content | `—` (none) | `—` (none) | `Art.50` (full) | `—` (none) |
 
 ## D5 — Human oversight & autonomy
 
 | Master Control | ISO/IEC 42001 | NIST AI RMF | EU AI Act | ISO/IEC 27001 |
 | --- | --- | --- | --- | --- |
-| **MC-D5-01** Human oversight of AI systems | `A.9.2` (partial) | `GOVERN-3.2` (partial) | `Art.14` (full) | — |
-| **MC-D5-02** Operator competence and human-AI configuration | `A.9.4` (partial) | `MAP-3.5` (full) | `Art.26` (full) | — |
+| **MC-D5-01** Human oversight of AI systems | `A.9.2` (partial) | `GOVERN-3.2` (partial) | `Art.14` (full) | `—` (none) |
+| **MC-D5-02** Operator competence and human-AI configuration | `A.9.4` (partial) | `MAP-3.5` (full) | `Art.26` (full) | `7.2` (partial) |
 
 ## D6 — Robustness, accuracy & security
 
 | Master Control | ISO/IEC 42001 | NIST AI RMF | EU AI Act | ISO/IEC 27001 |
 | --- | --- | --- | --- | --- |
-| **MC-D6-01** Accuracy and reliability | `A.6.2.4` (partial) | `MEASURE-2.5` (full) | `Art.15` (full) | — |
-| **MC-D6-02** Robustness and safety | `A.6.2.6` (partial) | `MEASURE-2.6` (full) | `Art.15` (full) | — |
+| **MC-D6-01** Accuracy and reliability | `A.6.2.4` (partial) | `MEASURE-2.5` (full) | `Art.15` (full) | `—` (none) |
+| **MC-D6-02** Robustness and safety | `A.6.2.6` (partial) | `MEASURE-2.6` (full) | `Art.15` (full) | `—` (none) |
 | **MC-D6-03** Security, cybersecurity and resilience | `—` (none) | `MEASURE-2.7` (full) | `Art.15` (full) | `A.8` (superset) |
-| **MC-D6-04** Verification, validation and testing (TEVV) | `A.6.2.4` (full) | `MEASURE-2.1` (full) | `Art.15` (partial) | — |
-| **MC-D6-05** Responsible design and development | `A.6.1.3` (full) | `MAP-1.1` (partial) | `Art.16` (partial) | — |
+| **MC-D6-04** Verification, validation and testing (TEVV) | `A.6.2.4` (full) | `MEASURE-2.1` (full) | `Art.15` (partial) | `A.8.29` (partial) |
+| **MC-D6-05** Responsible design and development | `A.6.1.3` (full) | `MAP-1.1` (partial) | `Art.16` (partial) | `A.8.25` (partial) |
 
 ## D7 — Lifecycle monitoring & post-market surveillance
 
@@ -62,15 +62,15 @@ Source baseline (manifest `0.1.0`, updated 2026-06-23): ISO/IEC 42001 2023, NIST
 | --- | --- | --- | --- | --- |
 | **MC-D7-01** Operation monitoring and post-market surveillance | `9.1` (full) | `MANAGE-4.1` (full) | `Art.72` (full) | `A.8.16` (partial) |
 | **MC-D7-02** Incident reporting and corrective action | `A.8.4` (full) | `MANAGE-4.3` (full) | `Art.73` (full) | `A.5.24` (full) |
-| **MC-D7-03** Performance evaluation and continual improvement | `9.2` (full) | `MANAGE-2.3` (partial) | `Art.72` (partial) | — |
+| **MC-D7-03** Performance evaluation and continual improvement | `9.2` (full) | `MANAGE-2.3` (partial) | `Art.72` (partial) | `10.1` (full) |
 
 ## D8 — Value-chain, third-party & GPAI governance
 
 | Master Control | ISO/IEC 42001 | NIST AI RMF | EU AI Act | ISO/IEC 27001 |
 | --- | --- | --- | --- | --- |
 | **MC-D8-01** Third-party and supplier governance | `A.10.3` (full) | `GOVERN-6.1` (full) | `Art.25` (full) | `A.5.19` (full) |
-| **MC-D8-02** Customer and downstream responsibilities | `A.10.4` (full) | `MANAGE-1.4` (full) | `Art.26` (partial) | — |
-| **MC-D8-03** General-purpose AI (GPAI) model governance | `A.4.4` (partial) | `MAP-4.1` (partial) | `Art.53` (full) | — |
+| **MC-D8-02** Customer and downstream responsibilities | `A.10.4` (full) | `MANAGE-1.4` (full) | `Art.26` (partial) | `—` (none) |
+| **MC-D8-03** General-purpose AI (GPAI) model governance | `A.4.4` (partial) | `MAP-4.1` (partial) | `Art.53` (full) | `—` (none) |
 
 ---
 

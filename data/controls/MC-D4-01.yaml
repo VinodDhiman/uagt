@@ -37,3 +37,13 @@ mappings:
     rationale: >
       Art.13 requires transparency and instructions for use for deployers.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: null
+    label: null
+    relationship: none
+    confidence: high
+    rationale: >
+      ISO/IEC 27001 has no control for transparency or provision of information to deployers
+      and users of an AI system.
+    reviewer: "Vinod Dhiman"

@@ -38,3 +38,13 @@ mappings:
       Art.14 requires high-risk systems designed for effective human oversight,
       intervention, and stop.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: null
+    label: null
+    relationship: none
+    confidence: high
+    rationale: >
+      ISO/IEC 27001 has no human-oversight-of-AI control; its access and segregation
+      controls serve a different purpose.
+    reviewer: "Vinod Dhiman"

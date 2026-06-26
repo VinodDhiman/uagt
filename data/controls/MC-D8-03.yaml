@@ -40,3 +40,12 @@ mappings:
       Art.53 with Art.55 sets binding obligations for GPAI models, including those with
       systemic risk.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: null
+    label: null
+    relationship: none
+    confidence: high
+    rationale: >
+      ISO/IEC 27001 has no concept of general-purpose or foundation AI models.
+    reviewer: "Vinod Dhiman"

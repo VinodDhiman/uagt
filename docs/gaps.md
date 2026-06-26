@@ -4,9 +4,21 @@
 
 | Master Control | Framework | Ref | Relationship | Confidence | Rationale |
 | --- | --- | --- | --- | --- | --- |
+| **MC-D2-02** AI system impact assessment | ISO/IEC 27001 | `—` | none | high | ISO/IEC 27001 has no equivalent to an AI or fundamental-rights impact assessment; its risk focus is information-security impact to the organization. |
+| **MC-D3-01** Data acquisition and provenance | ISO/IEC 27001 | `—` | none | high | ISO/IEC 27001 governs information assets but has no control for training-data provenance or lineage. |
+| **MC-D3-02** Data quality and preparation | ISO/IEC 27001 | `—` | none | high | Data quality and preparation for AI fall outside ISO/IEC 27001's information-security scope. |
+| **MC-D3-03** Data representativeness and bias examination | ISO/IEC 27001 | `—` | none | high | Representativeness and bias examination have no ISO/IEC 27001 equivalent. |
+| **MC-D4-01** Transparency and information to deployers and users | ISO/IEC 27001 | `—` | none | high | ISO/IEC 27001 has no control for transparency or provision of information to deployers and users of an AI system. |
+| **MC-D4-02** Technical documentation | ISO/IEC 27001 | `—` | none | medium | AI technical documentation (EU Annex IV style) has no direct ISO/IEC 27001 equivalent; 27001 documents an ISMS, not AI system design. |
 | **MC-D4-04** Disclosure of AI-generated and synthetic content | ISO/IEC 42001 | `—` | none | high | ISO/IEC 42001 contains no control specific to labelling AI-generated or synthetic content; no clean equivalent. |
 | **MC-D4-04** Disclosure of AI-generated and synthetic content | NIST AI RMF | `—` | none | high | The NIST AI RMF does not prescribe synthetic-content disclosure or marking. |
+| **MC-D4-04** Disclosure of AI-generated and synthetic content | ISO/IEC 27001 | `—` | none | high | ISO/IEC 27001 has no control for marking or disclosing AI-generated or synthetic content. |
+| **MC-D5-01** Human oversight of AI systems | ISO/IEC 27001 | `—` | none | high | ISO/IEC 27001 has no human-oversight-of-AI control; its access and segregation controls serve a different purpose. |
+| **MC-D6-01** Accuracy and reliability | ISO/IEC 27001 | `—` | none | high | Model accuracy and reliability are AI-performance concerns outside ISO/IEC 27001's information-security scope. |
+| **MC-D6-02** Robustness and safety | ISO/IEC 27001 | `—` | none | medium | Model-level robustness and safety have no direct ISO/IEC 27001 equivalent; its resilience controls address availability of information services. |
 | **MC-D6-03** Security, cybersecurity and resilience | ISO/IEC 42001 | `—` | none | high | ISO/IEC 42001 defers information-security controls to ISO/IEC 27001; no dedicated AI cybersecurity control in Annex A. |
+| **MC-D8-02** Customer and downstream responsibilities | ISO/IEC 27001 | `—` | none | medium | ISO/IEC 27001's supply-chain controls (A.5.19-A.5.22) address suppliers, not downstream-customer handoff of residual AI risk. |
+| **MC-D8-03** General-purpose AI (GPAI) model governance | ISO/IEC 27001 | `—` | none | high | ISO/IEC 27001 has no concept of general-purpose or foundation AI models. |
 | **MC-D1-01** AI policy and governance framework | EU AI Act | `Art.17` | partial | medium | Art.17 requires a QMS including a compliance strategy and written policies; broader than a single AI policy. |
 | **MC-D1-01** AI policy and governance framework | ISO/IEC 27001 | `A.5.1` | partial | medium | ISO/IEC 27001 A.5.1 establishes information-security policies; the same management- system pattern underpins an AI policy, though the governed subject differs. |
 | **MC-D1-02** Roles, responsibilities and accountability | EU AI Act | `Art.16` | partial | medium | Art.16 with Art.26 allocates accountability by role; statutory obligations rather than an internal RACI. |
@@ -15,8 +27,10 @@
 | **MC-D1-03** AI system inventory and registration | ISO/IEC 27001 | `A.5.9` | partial | medium | A.5.9 requires an inventory of assets; AI systems are governable assets, so the inventory pattern transfers, though it is not AI-specific. |
 | **MC-D1-04** AI literacy, competence and training | ISO/IEC 27001 | `A.6.3` | partial | medium | A.6.3 mandates security awareness and training; it parallels AI literacy and training but is scoped to information security. |
 | **MC-D2-01** AI risk assessment and treatment | NIST AI RMF | `MANAGE-1.1` | partial | medium | Risk activity is distributed across MAP/MEASURE/MANAGE rather than one consolidated process. |
+| **MC-D2-01** AI risk assessment and treatment | ISO/IEC 27001 | `6.1.2` | partial | medium | ISO/IEC 27001 clauses 6.1.2-6.1.3 establish a risk assessment and treatment process; the methodology aligns but its scope is information-security risk, not the full breadth of AI risk. |
 | **MC-D2-03** Risk tolerance and acceptance criteria | ISO/IEC 42001 | `6.1` | partial | medium | Clause 6.1 frames risk criteria; ISO does not separately codify a risk-tolerance statement. |
 | **MC-D2-03** Risk tolerance and acceptance criteria | EU AI Act | `Art.9` | partial | medium | Art.9 requires judging acceptable residual risk; partial to a standalone tolerance control. |
+| **MC-D2-03** Risk tolerance and acceptance criteria | ISO/IEC 27001 | `6.1.2` | partial | medium | Clause 6.1.2 requires defined risk acceptance criteria, but scoped to information- security risk rather than AI risk generally. |
 | **MC-D3-01** Data acquisition and provenance | NIST AI RMF | `MAP-2.3` | partial | low | NIST documents data across MAP; provenance is not a discrete subcategory. |
 | **MC-D3-02** Data quality and preparation | NIST AI RMF | `MAP-2.3` | partial | medium | Covers documentation of data; quality thresholds implied, not prescribed. |
 | **MC-D3-03** Data representativeness and bias examination | ISO/IEC 42001 | `A.7.4` | partial | medium | ISO addresses data quality; representativeness/bias is examined via quality, not a dedicated control. |
@@ -28,11 +42,14 @@
 | **MC-D5-01** Human oversight of AI systems | ISO/IEC 42001 | `A.9.2` | partial | medium | Annex A.9 addresses responsible use but not per-decision human intervention controls. |
 | **MC-D5-01** Human oversight of AI systems | NIST AI RMF | `GOVERN-3.2` | partial | medium | GOVERN 3.2 sets the oversight expectation, not the operational intervention capability. |
 | **MC-D5-02** Operator competence and human-AI configuration | ISO/IEC 42001 | `A.9.4` | partial | medium | A.9.4 with A.9.2 constrains use to intended purpose; operator competence is implied. |
+| **MC-D5-02** Operator competence and human-AI configuration | ISO/IEC 27001 | `7.2` | partial | low | Clause 7.2 requires competence of personnel; it partially supports operator competence but does not address human-AI configuration or oversight. |
 | **MC-D6-01** Accuracy and reliability | ISO/IEC 42001 | `A.6.2.4` | partial | medium | A.6.2.4 covers verification and validation; accuracy levels are not a discrete Annex A control. |
 | **MC-D6-02** Robustness and safety | ISO/IEC 42001 | `A.6.2.6` | partial | medium | A.6.2.6 supports detecting degradation; robustness is not a discrete Annex A control. |
 | **MC-D6-04** Verification, validation and testing (TEVV) | EU AI Act | `Art.15` | partial | medium | Art.15 implies testing of accuracy/robustness; formal conformity testing sits in Art.43. |
+| **MC-D6-04** Verification, validation and testing (TEVV) | ISO/IEC 27001 | `A.8.29` | partial | medium | A.8.29 requires security testing during development and acceptance; it aligns with TEVV but is scoped to security testing. |
 | **MC-D6-05** Responsible design and development | NIST AI RMF | `MAP-1.1` | partial | medium | MAP 1.1 documents purpose, context, and requirements driving design. |
 | **MC-D6-05** Responsible design and development | EU AI Act | `Art.16` | partial | low | Art.16 obliges providers to design systems to meet requirements; there is no single lifecycle article. |
+| **MC-D6-05** Responsible design and development | ISO/IEC 27001 | `A.8.25` | partial | medium | A.8.25 with A.8.27 establishes a secure development lifecycle and secure engineering principles; aligns with responsible design but is security-scoped. |
 | **MC-D7-01** Operation monitoring and post-market surveillance | ISO/IEC 27001 | `A.8.16` | partial | medium | A.8.16 requires monitoring of systems for anomalous behaviour; it supports operational monitoring but is security-focused, not full lifecycle and post-market surveillance. |
 | **MC-D7-03** Performance evaluation and continual improvement | NIST AI RMF | `MANAGE-2.3` | partial | medium | MANAGE 2.x sustains value and responds to emergent risks; improvement is distributed across functions. |
 | **MC-D7-03** Performance evaluation and continual improvement | EU AI Act | `Art.72` | partial | medium | Art.72's monitoring feeds improvement; there is no standalone continual-improvement article. |

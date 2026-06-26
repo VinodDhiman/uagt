@@ -37,3 +37,13 @@ mappings:
     rationale: >
       Art.15 binds appropriate accuracy for high-risk systems.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: null
+    label: null
+    relationship: none
+    confidence: high
+    rationale: >
+      Model accuracy and reliability are AI-performance concerns outside ISO/IEC 27001's
+      information-security scope.
+    reviewer: "Vinod Dhiman"

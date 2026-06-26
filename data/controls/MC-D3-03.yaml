@@ -37,3 +37,12 @@ mappings:
     rationale: >
       Art.10 requires examination of datasets in view of possible biases.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: null
+    label: null
+    relationship: none
+    confidence: high
+    rationale: >
+      Representativeness and bias examination have no ISO/IEC 27001 equivalent.
+    reviewer: "Vinod Dhiman"

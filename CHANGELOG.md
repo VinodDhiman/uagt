@@ -10,13 +10,18 @@ standard changes, MINOR for added controls/mappings, PATCH for corrections.
 
 ## [Unreleased]
 
+## [2.0.1] - 2026-06-26
+
 ### Added
-- **ISO/IEC 27001:2022 attached as a 4th, optional framework** — demonstrating that the
-  normalized Master Control Set lets a new framework map in cheaply without touching the
-  anchor mappings. Initial coverage on 10 controls where a genuine ISMS equivalent exists
-  (governance, asset inventory, training, PII, logging, security, monitoring, incidents,
-  suppliers). Notably it fills `MC-D6-03` (security), where ISO/IEC 42001 is `none` because
-  it defers security to ISO/IEC 27001 — now a `superset` mapping. 94 mappings total.
+- **ISO/IEC 27001:2022 attached as a 4th, optional framework, across all 28 controls** —
+  demonstrating that the normalized Master Control Set lets a new framework map in cheaply
+  without touching the anchor mappings. Mapped where a genuine ISMS equivalent exists
+  (governance, lifecycle/continual improvement, logging, security, incidents, suppliers,
+  secure development, testing) and flagged `none` where 27001 does not reach AI-specific
+  concerns (impact/rights assessment, data quality, bias, transparency, human oversight,
+  GPAI). Fills `MC-D6-03` (security), where ISO/IEC 42001 is `none` because it defers
+  security to ISO/IEC 27001 — now a `superset` mapping. **112 mappings total**
+  (59 full, 1 superset, 37 partial, 15 none).
 - The three anchors (ISO 42001 / NIST AI RMF / EU AI Act) remain **required** on every
   control (FR1); optional frameworks attach only where an equivalent exists. New
   `REQUIRED_FRAMEWORKS` vs display `FRAMEWORK_ORDER` distinction, enforced and tested.

@@ -36,3 +36,13 @@ mappings:
     rationale: >
       Art.10 requires relevant, sufficiently representative datasets governed for quality.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: null
+    label: null
+    relationship: none
+    confidence: high
+    rationale: >
+      Data quality and preparation for AI fall outside ISO/IEC 27001's information-security
+      scope.
+    reviewer: "Vinod Dhiman"

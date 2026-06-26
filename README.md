@@ -40,10 +40,13 @@ the source frameworks. Every control carries the traceability spine: an upward `
 sideways framework `mappings`, and forward `evidence` artefacts.
 
 The three anchor frameworks (ISO/IEC 42001, NIST AI RMF, EU AI Act) are **required** on
-every control (FR1). Further frameworks attach *optionally* to the Master Control Set where
-a genuine equivalent exists, without disturbing the anchor mappings — **ISO/IEC 27001:2022**
-is already attached this way (e.g. it fills the security gap where ISO/IEC 42001 defers to
-27001 — see `MC-D6-03`). The same mechanism extends to SOC 2 and others later.
+every control (FR1). Further frameworks attach *optionally* to the Master Control Set
+without disturbing the anchor mappings. **ISO/IEC 27001:2022** is attached across **all 28
+controls** — mapped where the ISMS aligns (governance, lifecycle, logging, security,
+incidents, suppliers) and flagged `none` where 27001 simply doesn't reach AI-specific
+concerns (data quality, bias, transparency, human oversight, GPAI). It fills the security
+gap where ISO/IEC 42001 defers to 27001 (`MC-D6-03`: 42001 `none` → 27001 `superset`). The
+same mechanism extends to SOC 2 and others later.
 
 Each mapping records the **nature** of correspondence — `full` / `partial` / `superset`
 / `subset` / `none` — plus a rationale, confidence, and reviewer. The `none` flags are

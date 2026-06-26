@@ -37,3 +37,13 @@ mappings:
     rationale: >
       Art.11 with Annex IV prescribes technical documentation for high-risk systems.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: null
+    label: null
+    relationship: none
+    confidence: medium
+    rationale: >
+      AI technical documentation (EU Annex IV style) has no direct ISO/IEC 27001 equivalent;
+      27001 documents an ISMS, not AI system design.
+    reviewer: "Vinod Dhiman"

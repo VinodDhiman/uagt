@@ -37,3 +37,13 @@ mappings:
     rationale: >
       Art.50 imposes marking/disclosure duties for synthetic media and certain interactions.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: null
+    label: null
+    relationship: none
+    confidence: high
+    rationale: >
+      ISO/IEC 27001 has no control for marking or disclosing AI-generated or synthetic
+      content.
+    reviewer: "Vinod Dhiman"

@@ -35,3 +35,13 @@ mappings:
     rationale: >
       Art.10 requires governance practices covering data collection and origin.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: null
+    label: null
+    relationship: none
+    confidence: high
+    rationale: >
+      ISO/IEC 27001 governs information assets but has no control for training-data
+      provenance or lineage.
+    reviewer: "Vinod Dhiman"

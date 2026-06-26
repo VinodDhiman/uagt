@@ -40,3 +40,14 @@ mappings:
       Art.72's monitoring feeds improvement; there is no standalone continual-improvement
       article.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: "10.1"
+    label: "Continual improvement"
+    relationship: full
+    confidence: high
+    rationale: >
+      ISO/IEC 27001 clauses 9-10 (monitoring, internal audit, management review, continual
+      improvement) share the Harmonised Structure with ISO/IEC 42001 and fully provide this
+      control.
+    reviewer: "Vinod Dhiman"

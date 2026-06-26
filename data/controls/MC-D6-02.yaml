@@ -37,3 +37,13 @@ mappings:
     rationale: >
       Art.15 binds robustness, including to errors and adversarial conditions.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: null
+    label: null
+    relationship: none
+    confidence: medium
+    rationale: >
+      Model-level robustness and safety have no direct ISO/IEC 27001 equivalent; its
+      resilience controls address availability of information services.
+    reviewer: "Vinod Dhiman"

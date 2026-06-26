@@ -37,3 +37,14 @@ mappings:
     rationale: >
       Art.9 mandates a continuous, iterative risk-management system for high-risk systems.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: "6.1.2"
+    label: "Information security risk assessment"
+    relationship: partial
+    confidence: medium
+    rationale: >
+      ISO/IEC 27001 clauses 6.1.2-6.1.3 establish a risk assessment and treatment process;
+      the methodology aligns but its scope is information-security risk, not the full
+      breadth of AI risk.
+    reviewer: "Vinod Dhiman"

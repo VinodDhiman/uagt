@@ -39,3 +39,13 @@ mappings:
       Art.16 obliges providers to design systems to meet requirements; there is no single
       lifecycle article.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: "A.8.25"
+    label: "Secure development life cycle"
+    relationship: partial
+    confidence: medium
+    rationale: >
+      A.8.25 with A.8.27 establishes a secure development lifecycle and secure engineering
+      principles; aligns with responsible design but is security-scoped.
+    reviewer: "Vinod Dhiman"

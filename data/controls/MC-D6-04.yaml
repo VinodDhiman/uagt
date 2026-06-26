@@ -38,3 +38,13 @@ mappings:
       Art.15 implies testing of accuracy/robustness; formal conformity testing sits in
       Art.43.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: "A.8.29"
+    label: "Security testing in development and acceptance"
+    relationship: partial
+    confidence: medium
+    rationale: >
+      A.8.29 requires security testing during development and acceptance; it aligns with
+      TEVV but is scoped to security testing.
+    reviewer: "Vinod Dhiman"

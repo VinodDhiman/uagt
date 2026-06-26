@@ -39,3 +39,13 @@ mappings:
       Art.9 requires judging acceptable residual risk; partial to a standalone tolerance
       control.
     reviewer: "Vinod Dhiman"
+  - framework: ISO-IEC-27001
+    version: "2022"
+    ref: "6.1.2"
+    label: "Information security risk assessment (risk acceptance criteria)"
+    relationship: partial
+    confidence: medium
+    rationale: >
+      Clause 6.1.2 requires defined risk acceptance criteria, but scoped to information-
+      security risk rather than AI risk generally.
+    reviewer: "Vinod Dhiman"
